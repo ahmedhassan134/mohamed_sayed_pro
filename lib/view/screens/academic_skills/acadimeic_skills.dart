@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 
+import '../../../service/responsive_service.dart';
 import '../../widgets/custom_stack.dart';
 class SkillsAcademic extends StatelessWidget {
 static String id='skills_academic';
@@ -28,21 +29,27 @@ static String id='skills_academic';
                 children:[
 
 
-                  SizedBox(height: 7,),
-                  CustomStack(onTap: null, text:'عربي', img: 'assets/images/academic_skills/d2.jpg',
-                    s1: 55,
-                    s2: 10,
+                  SizedBox(height: SizeConfig.defaultSize),
+                  CustomStack(
+                    s1:  SizeConfig.defaultSize * 6,
+                    s2:  SizeConfig.defaultSize * 2,
+                    onTap: null, text:'عربي', img: 'assets/images/academic_skills/d2.jpg',
+
                     clr: Colors.white,
 
                   ),
-                  CustomStack(onTap: null, text:'حساب', img: 'assets/images/academic_skills/d3.jpg',
-                    s1: 55,
-                    s2: 10,
+                  CustomStack(
+                    s1:  SizeConfig.defaultSize * 6,
+                    s2:  SizeConfig.defaultSize * 2,
+                    onTap: null, text:'حساب', img: 'assets/images/academic_skills/d3.jpg',
+
                     clr: Colors.white,),
                   CustomStack(onTap: null, text:'اسئله تقويم', img: 'assets/images/academic_skills/d4.jfif',
-                    s1: 30,
-                    s2: 5,
-                    clr: Colors.white,),
+
+                    clr: Colors.white,
+                    s1:  SizeConfig.defaultSize * 2,
+                    s2:  SizeConfig.defaultSize * 2,
+                  ),
                 ],
               ),
             ),

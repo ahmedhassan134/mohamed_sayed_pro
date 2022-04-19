@@ -1,5 +1,5 @@
 import 'package:romio/models/classes/abot_the_faculty.dart';
-import 'package:romio/view/screens/drawer/about_the_faculty.dart';
+
 
 List<FacultyModel> facultyList=[
   FacultyModel(img: 'assets/images/drawer/about_the_faculty/elroby.jpg', text: 'وكيل شئون الكليه'),

@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
+
+import '../../service/responsive_service.dart';
 class Stackk extends StatelessWidget {
-  Stackk({required this.img,required this.num1,required this.num2,required this.pos1,required this.pos2});
+  Stackk({required this.img,this.num1, this.num2, this.pos1,this.pos2});
   final String img;
-  final double num1;
-  final double num2;
-  final double pos1;
-  final double pos2;
+  double?  num1;
+   double? num2;
+  double ?pos1;
+   double ?pos2;
 
   @override
   Widget build(BuildContext context) {
-    final width=MediaQuery.of(context).size.width;
-    final height=MediaQuery.of(context).size.height;
+
     return   Stack(
       clipBehavior: Clip.none,
       children: [
         //CustomStack(onTap: null, text: 'النصائح والارشادات', img: 'assets/images/tips_and_advice/1.png'),
         Container(
+          margin: const EdgeInsetsDirectional.only(bottom: 20),
+
           width: double.infinity,
           height: MediaQuery.of(context).size.height * .25,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.deepPurple,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(60),
@@ -28,13 +31,17 @@ class Stackk extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: pos1,
-          left: pos2,
-          child: Image.asset(img,
-            height: num1,
-            width: num2,
-            fit: BoxFit.fill,
+          top: SizeConfig.defaultSize *5 ,
+          left: SizeConfig.defaultSize *3,
+          right: SizeConfig.defaultSize *4,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: Image.asset(img,
+              height: SizeConfig.defaultSize *20,
+              width: MediaQuery.of(context).size.width *.75,
+              fit: BoxFit.fill,
 
+            ),
           ),
         ),
 

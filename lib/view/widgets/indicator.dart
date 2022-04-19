@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../service/responsive_service.dart';
 class Indicator extends StatelessWidget {
 
 
@@ -22,9 +24,9 @@ class Indicator extends StatelessWidget {
   Widget circular(Color color)
   {
     return  Container(
-      margin: EdgeInsets.all(5),
-      width: 15,
-      height: 15,
+      margin: const EdgeInsets.all(5),
+      height: SizeConfig.defaultSize * 2,
+      width: SizeConfig.defaultSize * 2,
       decoration: BoxDecoration(
           color: color,
           shape: BoxShape.circle

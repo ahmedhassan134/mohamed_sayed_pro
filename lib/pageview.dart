@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:romio/service/responsive_service.dart';
 import 'package:romio/view/splash_screen.dart';
 import 'package:romio/view/widgets/indicator.dart';
 
@@ -11,6 +12,8 @@ import 'models/obj/page_builder_ob.dart';
 
 
 class PaageView extends StatefulWidget {
+  static String id='pageview';
+
   const PaageView({Key? key}) : super(key: key);
 
   @override
@@ -21,13 +24,14 @@ class _PaageViewState extends State<PaageView> {
   int _currentIndex=0;
   final PageController _controller=PageController();
 
+  @override
   void initState() {
     super.initState();
-    Timer.periodic(Duration(seconds: 3), (_){
+    Timer.periodic(const Duration(seconds: 3), (_){
       if(_currentIndex<3)
       {
         _currentIndex++;
-        _controller.animateToPage(_currentIndex, duration:Duration(milliseconds: 300), curve: Curves.easeIn);
+        _controller.animateToPage(_currentIndex, duration:const Duration(milliseconds: 300), curve: Curves.easeIn);
       }
 
 
@@ -36,7 +40,9 @@ class _PaageViewState extends State<PaageView> {
 
   }
 
+  @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Scaffold(
       body: Stack(
         children: [
@@ -45,14 +51,7 @@ class _PaageViewState extends State<PaageView> {
               onPageChanged: (val){
                 setState(() {
                   _currentIndex=val;
-                  // if(_currentIndex==3)
-                  //   {
-                  //     Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
-                  //       return HomeScreen();
-                  //
-                  //     }
-                  //     ),
-                  // );}
+
                 });
 
               },
@@ -69,20 +68,20 @@ class _PaageViewState extends State<PaageView> {
                     padding: const EdgeInsetsDirectional.only(top: 15,start: 80),
                     child: Text(
                       "${myData[index].title}",
-                      style: TextStyle(color: Colors.black, fontSize: 40,fontWeight: FontWeight.bold),
+                      style: const TextStyle(color: Colors.black, fontSize: 40,fontWeight: FontWeight.bold),
                     ),
                   ),
                 );
               }),
           Align(
-              alignment: Alignment(0,.7),
+              alignment:  Alignment(SizeConfig.defaultSize*0 ,SizeConfig.defaultSize*.05),
 
               child: Indicator(_currentIndex)),
           Align(
-            alignment: Alignment(0.0, 0.9),
+            alignment: Alignment(SizeConfig.defaultSize*.0, SizeConfig.defaultSize*.09),
             child: Container(
               width: double.infinity,
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: MaterialButton(
                 onPressed: () async {
                   SharedPreferences _prefs =  await SharedPreferences.getInstance();
@@ -96,7 +95,7 @@ class _PaageViewState extends State<PaageView> {
                   );
                 },
                 color: Colors.pink,
-                child: Text(
+                child: const Text(
                   'Get Started',
                   style: TextStyle(color: Colors.white),
                 ),

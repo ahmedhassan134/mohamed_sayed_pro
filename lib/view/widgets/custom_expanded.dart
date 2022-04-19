@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../service/responsive_service.dart';
 class CustomExpanded extends StatelessWidget {
   CustomExpanded({required this.img,required this.text,required this.onTap});
  String ? img;
@@ -11,23 +14,25 @@ class CustomExpanded extends StatelessWidget {
       child: GestureDetector(
         onTap:onTap,
         child: Container(
-          alignment: Alignment.bottomRight,
-          width: 400,
-          height: 200,
+
+          alignment: Alignment.bottomCenter,
+          width: SizeConfig.defaultSize * .25,
+                 height: SizeConfig.defaultSize * 20,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
               image: DecorationImage(
                   image: AssetImage(img!),
                   fit: BoxFit.cover)),
           child: Padding(
-            padding:
-            const EdgeInsetsDirectional.only(bottom: 1, end: 5),
-            child: Text(
-              text!,
-              style: TextStyle(
-                  color: Colors.black.withOpacity(1),
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
+            padding: const EdgeInsetsDirectional.only(end: 5,bottom: 3),
+            child: FittedBox(
+              child: Text(
+                text!,
+                style: TextStyle(
+                    color: Colors.black.withOpacity(1),
+                    fontSize: 3 * SizeConfig.blockSizeVertical  ,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
           ),
         ),

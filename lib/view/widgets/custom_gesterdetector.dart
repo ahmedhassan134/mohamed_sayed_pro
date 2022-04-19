@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:romio/service/responsive_service.dart';
 class CustomGesterDetector extends StatelessWidget {
 CustomGesterDetector({required this.onTap,required this.text,required this.iconData});
   Function()? onTap;
@@ -9,10 +10,10 @@ CustomGesterDetector({required this.onTap,required this.text,required this.iconD
     return Row(
       children: [
         Icon(iconData,size: 35,),
-        SizedBox(width: 30,),
+        // SizedBox(width: SizeConfig.defaultSize*.01,),
         GestureDetector(
           onTap: onTap,
-          child: Text(text,style: TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
+          child: Text(text,style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
         ),
       ],
     );

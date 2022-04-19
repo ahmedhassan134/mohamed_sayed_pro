@@ -1,10 +1,12 @@
 
 
 
+
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:romio/service/responsive_service.dart';
 
 
 import 'package:romio/view/screens/academic_skills/acadimeic_skills.dart';
@@ -21,6 +23,8 @@ import 'package:romio/view/widgets/custom_gesterdetector.dart';
 class HomePage extends StatefulWidget {
   static String id = 'homepage';
 
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -30,6 +34,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return AdvancedDrawer(
 
        backdropColor: Colors.blueAccent,
@@ -49,14 +54,14 @@ class _HomePageState extends State<HomePage> {
         blurRadius: 0.0,
       ),
     ],
-   borderRadius: const BorderRadius.all(Radius.circular(16)),
+   borderRadius: BorderRadius.all(Radius.circular(16)),
     ),
 
 
       drawer: SafeArea(
         child: Container(
 
-          padding: EdgeInsetsDirectional.only(start: 10),
+          padding: const EdgeInsetsDirectional.only(start: 10),
 
 
           alignment: Alignment.topLeft,
@@ -64,13 +69,13 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
 
               //  CircleAvatar(
               //   radius:,
               //   backgroundImage: AssetImage('assets/images/8.jpg'),
               // ),
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 48, // Image radius
                 backgroundImage: AssetImage(
                 'assets/images/8.jpg',
@@ -78,9 +83,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
 
-              SizedBox(height: 7,),
-              Text('الاعاقه العقليه',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white),),
-              SizedBox(height: 50,),
+              const SizedBox(height: 7,),
+              const Text('الاعاقه العقليه',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white),),
+              const SizedBox(height: 50,),
               CustomGesterDetector(
                 iconData: Icons.home,
 
@@ -130,7 +135,7 @@ class _HomePageState extends State<HomePage> {
               valueListenable: _advancedDrawerController,
               builder: (_, value, __) {
                 return AnimatedSwitcher(
-                  duration: Duration(milliseconds: 250),
+                  duration: const Duration(milliseconds: 250),
                   child: Icon(
                     value.visible ? Icons.clear : Icons.menu,
                     key: ValueKey<bool>(value.visible),
@@ -171,7 +176,7 @@ class _HomePageState extends State<HomePage> {
 
 
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
 
 
@@ -182,10 +187,12 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, AdviceHome.id);
                 },
               ),
-              const SizedBox(
-                width: 10,
+               SizedBox(
+                width:   SizeConfig.defaultSize * 1,
+
               ),
-              CustomExpanded(
+              CustomExpanded
+                (
                 img: 'assets/images/mental_retardation/a1.jpg',
                 text: ' الاعاقه العقليه',
                 onTap: () {
@@ -194,23 +201,25 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: SizeConfig.defaultSize * 1,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomExpanded(
+
                 img: 'assets/images/academic_skills/d1.jfif',
                 text: 'مهارات اكاديميه',
                 onTap: () {
                   Navigator.pushNamed(context, SkillsAcademic.id);
                 },
               ),
-              SizedBox(
-                width: 10,
+           SizedBox(
+                width:   SizeConfig.defaultSize * 1,
               ),
-              CustomExpanded(
+              CustomExpanded
+                (
                 img: 'assets/images/life_skills/c1.png',
                 text: 'مهارات حياتيه',
                 onTap: () {

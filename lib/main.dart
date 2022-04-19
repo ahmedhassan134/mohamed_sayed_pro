@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:romio/home_page.dart';
-import 'package:romio/models/classes/clasic2.dart';
+
 import 'package:romio/pageview.dart';
 import 'package:romio/view/classic_screens/extreme.dart';
 import 'package:romio/view/classic_screens/medium.dart';
@@ -9,6 +9,7 @@ import 'package:romio/view/classic_screens/simple.dart';
 import 'package:romio/view/classic_screens/very_extreme.dart';
 
 import 'package:romio/view/mental_screens/classifiction.dart';
+import 'package:romio/view/mental_screens/equilibrium_curve.dart';
 import 'package:romio/view/mental_screens/identfiation.dart';
 import 'package:romio/view/mental_screens/personalty.dart';
 import 'package:romio/view/mental_screens/properties.dart';
@@ -27,10 +28,18 @@ void main() async  {
   WidgetsFlutterBinding.ensureInitialized();
   SharedPreferences _prefs =  await SharedPreferences.getInstance();
   bool ? token=_prefs.getBool("x");
-  Widget screen=(token==false|| token==null)?PaageView():SplashScreen();
+  Widget screen=(token==false || token==null)? const PaageView():SplashScreen();
 
-  runApp(MyApp());
-}
+  runApp(const MyApp());
+//   WidgetsFlutterBinding.ensureInitialized();
+//   SharedPreferences _prefs =  await SharedPreferences.getInstance();
+//   bool ? token=_prefs.getBool("x");
+//   Widget screen=(token==false|| token==null)?PaageView():HomeScreen();
+//
+//   runApp(MaterialApp(home: screen,));
+
+
+ }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -46,7 +55,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.light,
 
 
-        appBarTheme: AppBarTheme(
+        appBarTheme: const AppBarTheme(
           backgroundColor: Colors.deepPurple,
           centerTitle: true,
           titleTextStyle: TextStyle(
@@ -59,11 +68,13 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-     initialRoute:SplashScreen.id,
+     // initialRoute:PaageView.id,
+      home: const PaageView(),
 
       routes: {
-        HomePage.id:(context)=>HomePage(),
-        MentalHome.id:(context)=> MentalHome(),
+        PaageView.id:(context)=>const PaageView(),
+        HomePage.id:(context)=>const HomePage(),
+        MentalHome.id:(context)=> const MentalHome(),
         AdviceHome.id:(context)=>AdviceHome(),
         LifeSkills.id:(context)=>LifeSkills(),
         SkillsAcademic.id:(context)=>SkillsAcademic(),
@@ -73,13 +84,14 @@ class MyApp extends StatelessWidget {
         AboutApp.id:(context)=>AboutApp(),
         Identifiation.id:(context)=>Identifiation(),
         Reasons.id:(context)=>Reasons(),
-        Properties.id:(context)=>Properties(),
-       Classification.id:(context)=>Classification(),
+        Pro.id:(context)=>Pro(),
+        Classification.id:(context)=>Classification(),
         Simple.id:(context)=>Simple(),
         Medium.id:(context)=>Medium(),
         Extreme.id:(context)=>Extreme(),
         VeryExtreme.id:(context)=>VeryExtreme(),
-        Personality.id:(context)=>Personality()
+        Personality.id:(context)=>Personality(),
+        EquilibriumCurve.id:(context)=>EquilibriumCurve()
 
 
       },

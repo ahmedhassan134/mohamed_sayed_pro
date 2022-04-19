@@ -10,14 +10,14 @@ class FacultyPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           'عن الكليه',
           style: TextStyle(color: Colors.white),
         ),
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-        padding: EdgeInsets.symmetric(horizontal: 6, vertical: 10),
+        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 10),
         width: double.infinity,
         height: MediaQuery.of(context).size.height * .9,
         decoration: BoxDecoration(
@@ -28,7 +28,7 @@ class FacultyPage extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
+              children: const [
                 // Expanded(child: Image.asset('assets/images/bns.png')),
                 CircleAvatar(
                   radius: 30,
@@ -53,7 +53,7 @@ class FacultyPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             CustomColumnDrawer(
@@ -70,9 +70,9 @@ class FacultyPage extends StatelessWidget {
                 text2: 'وكيل الكليه للدراسات العليا '),
           GridView.builder(
             shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
 
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                 mainAxisSpacing: 3,
                 crossAxisSpacing: 4,

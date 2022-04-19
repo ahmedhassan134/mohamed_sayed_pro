@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:romio/service/responsive_service.dart';
 import 'package:romio/view/classic_screens/extreme.dart';
 import 'package:romio/view/classic_screens/medium.dart';
 import 'package:romio/view/classic_screens/simple.dart';
@@ -26,14 +27,15 @@ class Classification extends StatelessWidget {
             children: [
               Stackk(
                 img: 'assets/images/mental_retardation/a4.jpg',
-                pos1: 50,
-                pos2: 50,
-                num1: 200,
-                num2: 300,
+
               ),
-              const SizedBox(
-                height: 60,
+               Container(
+                 padding: const EdgeInsetsDirectional.only(top: 15,end: 8,start: 2,bottom: 5) ,
+                 child: SizedBox
+                   (
+                  height: SizeConfig.defaultSize *7,
               ),
+               ),
               CustomContainer((){
                 Navigator.pushNamed(context, Simple.id);
               }, 'بسيطه'),

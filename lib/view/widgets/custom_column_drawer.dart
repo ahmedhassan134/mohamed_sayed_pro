@@ -11,21 +11,21 @@ class CustomColumnDrawer extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(20),
-          child: CircleAvatar(
+          child: const CircleAvatar(
             radius: 20,
             backgroundColor: Colors.deepPurple,
           )
           //Image.asset(img,height: 80,width: 80,),
 
         ),
-        SizedBox(height: 5,),
+        const SizedBox(height: 5,),
         Column(
           children: [
-            Text(text1 ,style: TextStyle(fontWeight: FontWeight.bold),),
-            Text(text2,style: TextStyle(fontWeight: FontWeight.bold),),
+            Text(text1 ,style: const TextStyle(fontWeight: FontWeight.bold),),
+            Text(text2,style: const TextStyle(fontWeight: FontWeight.bold),),
           ],
         ),
-        SizedBox(height: 8,)
+        const SizedBox(height: 8,)
       ],
     );
   }

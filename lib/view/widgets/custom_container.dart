@@ -7,7 +7,7 @@ String ? title;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * .09,
       decoration: BoxDecoration(
@@ -18,7 +18,7 @@ String ? title;
         child: Center(
             child: Text(
               title!,
-              style: TextStyle(color: Colors.white, fontSize: 30),
+              style: const TextStyle(color: Colors.white, fontSize: 30),
             )),
       ),
     );
