@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:romio/view/screens/academic_skills/arabic.dart';
+import 'package:romio/view/screens/academic_skills/math.dart';
 
 import '../../../service/responsive_service.dart';
 import '../../widgets/custom_stack.dart';
@@ -33,7 +35,9 @@ static String id='skills_academic';
                   CustomStack(
                     s1:  SizeConfig.defaultSize * 6,
                     s2:  SizeConfig.defaultSize * 2,
-                    onTap: null, text:'عربي', img: 'assets/images/academic_skills/d2.jpg',
+                    onTap:(){
+                      Navigator.pushNamed(context, Arabic.id);
+                    }, text:'عربي', img: 'assets/images/academic_skills/d2.jpg',
 
                     clr: Colors.white,
 
@@ -41,7 +45,10 @@ static String id='skills_academic';
                   CustomStack(
                     s1:  SizeConfig.defaultSize * 6,
                     s2:  SizeConfig.defaultSize * 2,
-                    onTap: null, text:'حساب', img: 'assets/images/academic_skills/d3.jpg',
+                    onTap: (){
+                      Navigator.pushNamed(context, Math.id);
+
+                    }, text:'حساب', img: 'assets/images/academic_skills/d3.jpg',
 
                     clr: Colors.white,),
                   CustomStack(onTap: null, text:'اسئله تقويم', img: 'assets/images/academic_skills/d4.jfif',

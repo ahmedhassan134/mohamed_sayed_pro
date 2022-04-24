@@ -38,6 +38,8 @@ dependencies:
   flutter_advanced_drawer:
   flutter_staggered_animations:
   shared_preferences:
+  url_launcher:
+  audioplayers:
 
 
 
@@ -75,6 +77,10 @@ flutter:
     - assets/images/tips_and_advice/
     - assets/images/drawer/about_the_faculty/
     - assets/images/drawer/who_we_are/
+    - assets/images/numbers/
+    - assets/sounds/numbers/
+    -  assets/images/alphabetic/
+    - assets/sounds/alphabetic/
 
 
 

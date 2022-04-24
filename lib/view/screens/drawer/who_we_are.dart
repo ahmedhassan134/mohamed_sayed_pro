@@ -1,110 +1,148 @@
+
 import 'package:flutter/material.dart';
 import 'package:romio/models/obj/about_the_faculty.dart';
-import 'package:romio/view/widgets/custom_column_drawer.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class  PeoplePage extends StatelessWidget {
-  static String id = 'faculty_page';
+import '../../../service/responsive_service.dart';
+
+class AppPresenter extends StatelessWidget {
+  const AppPresenter({Key? key}) : super(key: key);
+
+
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
       appBar: AppBar(
-        title: const Text(
-          'من نحن',
-          style: TextStyle(color: Colors.white),
-        ),
+        title: const Text('مقدمي البرنامج'),
       ),
-      body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 10),
-        width: double.infinity,
-        height: MediaQuery.of(context).size.height * .9,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: ListView(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                // Expanded(child: Image.asset('assets/images/bns.png')),
-                CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage('assets/images/bns.png'),
+      body: Stack(
+        children: [
+          // Image.asset(
+          //   'assets/images/four.jpg',
+          //   width: double.infinity,
+          //   height: double.infinity,
+          //   fit: BoxFit.cover,
+          // ),
+          Container(
+            margin: EdgeInsets.symmetric(
+                horizontal: SizeConfig.defaultSize * 1,
+                vertical: SizeConfig.defaultSize * 1),
+            padding: EdgeInsets.symmetric(
+                horizontal: SizeConfig.defaultSize * 1,
+                vertical: SizeConfig.defaultSize * 2),
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * .9,
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                  colors: [
+                    Colors.tealAccent,
+                    Colors.deepPurple
+                  ]
+              ),
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    // Expanded(child: Image.asset('assets/images/bns.png')),
+                    CircleAvatar(
+                      radius: SizeConfig.defaultSize * 3,
+                      backgroundImage: const AssetImage('assets/images/bns.png'),
+                    ),
+                    SizedBox(
+                      width: SizeConfig.defaultSize * 1,
+                    ),
+                    const Expanded(
+                      child: Text(
+                        'كليه علوم ذوي الاحتياجات الخاصه جامعه بني سويف ',
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    SizedBox(
+                      width: SizeConfig.defaultSize * 1,
+                    ),
+                    CircleAvatar(
+                      radius: SizeConfig.defaultSize * 3,
+                      backgroundImage: const AssetImage('assets/images/bns2.jfif'),
+                    ),
+                  ],
                 ),
                 SizedBox(
-                  width: 10,
+                  height: SizeConfig.defaultSize * 3,
                 ),
+
+
+
                 Expanded(
-                  child: Text(
-                    'كليه علوم ذوي الاحتياجات الخاصه جامعه بني سويف ',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
+                  child: GridView.builder(
+                    itemCount:facultyList.length,
+                    // shrinkWrap: true,
+                    // physics: const NeverScrollableScrollPhysics(),
+
+                    gridDelegate:  const SliverGridDelegateWithMaxCrossAxisExtent(
+                      childAspectRatio: .8,
+                      crossAxisSpacing: 6,
+                      mainAxisSpacing: 8,
+                      maxCrossAxisExtent: 200,
+
+                    ),
+                    itemBuilder: (context, index) {
+                      return Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+
+                          Expanded(
+
+                            child:   ClipOval(
+                              child: SizedBox.fromSize(
+                                size: Size.fromRadius(SizeConfig.defaultSize * 7),
+                                // Image radius
+                                child: Image.asset(facultyList[index].img,
+                                    fit: BoxFit.fill),
+                              ),
+                            ),
+                            flex: 3,
+                          ),
+                          SizedBox(
+                            height: SizeConfig.defaultSize * 1,
+                          ),
+
+                          Expanded(
+                            child: Text(
+                              facultyList[index].text,
+                              style: const TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                            flex: 1,
+                          ),
+                        ],
+                      );
+                    },
+                    // itemCount: facultyList.length,
                   ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                CircleAvatar(
-                  radius: 30,
-                  backgroundImage: AssetImage('assets/images/bns2.jfif'),
-                ),
+                )
               ],
             ),
-            const SizedBox(
-              height: 15,
-            ),
-            CustomColumnDrawer(
-                img: 'assets/images/drawer/about_the_faculty/ali.jpg',
-                text1: 'ا/د : علي محمد',
-                text2: 'رئيس جامعه بني سويف'),
-            CustomColumnDrawer(
-                img: 'assets/images/drawer/about_the_faculty/hazem.jpg',
-                text1: 'ا/د : حازم سيف ',
-                text2: 'عميد كليه علوم ذوي الاحتياجات '),
-            CustomColumnDrawer(
-                img: 'assets/images/drawer/about_the_faculty/elroby.jpg',
-                text1: 'ا/د : حمزه طه ',
-                text2: 'وكيل الكليه للدراسات العليا '),
-            GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 3,
-                  crossAxisSpacing: 4,
-                  childAspectRatio: 3/2
-
-              ), itemBuilder: (context ,index){
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // Expanded(child: ClipRRect(
-                  //
-                  //
-                  //   child: Image.asset(facultyList[index].img),
-                  //   borderRadius: BorderRadius.circular(16),
-                  // ),
-                  // ),
-                  const CircleAvatar(
-                    radius: 20,
-                    backgroundColor: Colors.deepPurple,
-                  ),
-                  const SizedBox(height: 5,),
-                  Text(facultyList[index].text,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)
-
-                ],
-              );
-            },
-              itemCount: facultyList.length,)
-
-          ],
-
-        ),
+          ),
+        ],
       ),
     );
+  }
+
+  Future<void> _makePhoneCall(String phoneNumber) async {
+    // Use `Uri` to ensure that `phoneNumber` is properly URL-encoded.
+    // Just using 'tel:$phoneNumber' would create invalid URLs in some cases,
+    // such as spaces in the input, which would cause `launch` to fail on some
+    // platforms.
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: phoneNumber,
+    );
+    await launch(launchUri.toString());
   }
 }

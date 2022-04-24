@@ -18,6 +18,7 @@ import 'package:romio/view/screens/mental_handicap/mental_home.dart';
 import 'package:romio/view/screens/tips_and_advice/advice.dart';
 import 'package:romio/view/widgets/custom_expanded.dart';
 import 'package:romio/view/widgets/custom_gesterdetector.dart';
+import 'package:romio/view/widgets/drawer_widget.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -58,74 +59,7 @@ class _HomePageState extends State<HomePage> {
     ),
 
 
-      drawer: SafeArea(
-        child: Container(
-
-          padding: const EdgeInsetsDirectional.only(start: 10),
-
-
-          alignment: Alignment.topLeft,
-
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const SizedBox(height: 40,),
-
-              //  CircleAvatar(
-              //   radius:,
-              //   backgroundImage: AssetImage('assets/images/8.jpg'),
-              // ),
-              const CircleAvatar(
-                radius: 48, // Image radius
-                backgroundImage: AssetImage(
-                'assets/images/8.jpg',
-
-                ),
-              ),
-
-              const SizedBox(height: 7,),
-              const Text('الاعاقه العقليه',style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white),),
-              const SizedBox(height: 50,),
-              CustomGesterDetector(
-                iconData: Icons.home,
-
-                  onTap: (){
-                Navigator.pushNamed(context, HomePage.id);
-
-
-              }, text: 'الصفحه الرئيسيه'),
-              CustomGesterDetector(
-                iconData: Icons.school_outlined,
-
-                  onTap: (){
-                Navigator.pushNamed(context, FacultyPage.id);
-
-
-              }, text: 'عن الكليه'),
-              CustomGesterDetector(
-                iconData: Icons.people,
-                  onTap: (){
-
-                Navigator.pushNamed(context, PeoplePage.id);
-
-
-              }, text: 'من نحن ؟'),
-              CustomGesterDetector(
-                iconData: Icons.app_blocking,
-                  onTap: (){
-                Navigator.pushNamed(context, AboutApp.id);
-
-
-              }, text: 'عن التطبيق '),
-              CustomGesterDetector(
-                  iconData: Icons.contact_mail_rounded,
-                  onTap: null, text: 'kk',),
-
-            ],
-          ),
-
-        ),
-      ),
+      drawer: DrawerWidget(),
       child: Scaffold(
         backgroundColor: Colors.deepPurple,
         appBar: AppBar(

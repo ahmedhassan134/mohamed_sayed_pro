@@ -1,31 +1,28 @@
 import 'package:flutter/material.dart';
-class CustomColumnDrawer extends StatelessWidget {
-  CustomColumnDrawer({required this.img, required this.text1,required this.text2});
-  String img;
-  String text1;
-  String text2;
 
+import '../../service/responsive_service.dart';
+
+
+class  CustomGesterDetectorDrawer extends StatelessWidget {
+  CustomGesterDetectorDrawer({Key? key, required this.onTap,required this.text,required this.iconData}) : super(key: key);
+  Function()? onTap;
+  String text;
+  late IconData iconData;
   @override
   Widget build(BuildContext context) {
-    return   Column(
-      children: [
-        ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: const CircleAvatar(
-            radius: 20,
-            backgroundColor: Colors.deepPurple,
-          )
-          //Image.asset(img,height: 80,width: 80,),
+    return Row(
 
+      children: [
+        Expanded
+
+          (child: Icon(iconData,size: 35,),flex: 1,),
+        SizedBox(width: SizeConfig.defaultSize* 2,),
+        Expanded(
+          child: GestureDetector(
+            onTap: onTap,
+            child: Text(text,style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
+          ),flex: 3,
         ),
-        const SizedBox(height: 5,),
-        Column(
-          children: [
-            Text(text1 ,style: const TextStyle(fontWeight: FontWeight.bold),),
-            Text(text2,style: const TextStyle(fontWeight: FontWeight.bold),),
-          ],
-        ),
-        const SizedBox(height: 8,)
       ],
     );
   }

@@ -15,6 +15,8 @@ import 'package:romio/view/mental_screens/personalty.dart';
 import 'package:romio/view/mental_screens/properties.dart';
 import 'package:romio/view/mental_screens/reasons.dart';
 import 'package:romio/view/screens/academic_skills/acadimeic_skills.dart';
+import 'package:romio/view/screens/academic_skills/arabic.dart';
+import 'package:romio/view/screens/academic_skills/math.dart';
 import 'package:romio/view/screens/drawer/abou_the_app.dart';
 import 'package:romio/view/screens/drawer/about_the_faculty.dart';
 import 'package:romio/view/screens/drawer/who_we_are.dart';
@@ -79,19 +81,21 @@ class MyApp extends StatelessWidget {
         LifeSkills.id:(context)=>LifeSkills(),
         SkillsAcademic.id:(context)=>SkillsAcademic(),
         SplashScreen.id:(context)=>SplashScreen(),
-        FacultyPage.id:(context)=>FacultyPage(),
-        PeoplePage.id:(context)=>PeoplePage(),
+        // FacultyPage.id:(context)=>FacultyPage(),
+        // PeoplePage.id:(context)=>PeoplePage(),
         AboutApp.id:(context)=>AboutApp(),
         Identifiation.id:(context)=>Identifiation(),
         Reasons.id:(context)=>Reasons(),
         Pro.id:(context)=>Pro(),
         Classification.id:(context)=>Classification(),
         Simple.id:(context)=>Simple(),
-        Medium.id:(context)=>Medium(),
+        Medium.id:(context)=>const Medium(),
         Extreme.id:(context)=>Extreme(),
         VeryExtreme.id:(context)=>VeryExtreme(),
         Personality.id:(context)=>Personality(),
-        EquilibriumCurve.id:(context)=>EquilibriumCurve()
+        EquilibriumCurve.id:(context)=>EquilibriumCurve(),
+        Math.id:(context)=>Math(),
+        Arabic.id:(context)=>Arabic(),
 
 
       },
