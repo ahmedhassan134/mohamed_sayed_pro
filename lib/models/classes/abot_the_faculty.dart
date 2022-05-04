@@ -1,5 +1,5 @@
-class FacultyModel{
+class PersonModel{
   final String img;
   final String text;
-  FacultyModel({required this.img,required this.text});
+  PersonModel({required this.img,required this.text});
 }

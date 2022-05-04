@@ -10,14 +10,12 @@ import 'package:romio/service/responsive_service.dart';
 
 
 import 'package:romio/view/screens/academic_skills/acadimeic_skills.dart';
-import 'package:romio/view/screens/drawer/abou_the_app.dart';
-import 'package:romio/view/screens/drawer/about_the_faculty.dart';
-import 'package:romio/view/screens/drawer/who_we_are.dart';
+
 import 'package:romio/view/screens/life_skills/life_skills.dart';
 import 'package:romio/view/screens/mental_handicap/mental_home.dart';
 import 'package:romio/view/screens/tips_and_advice/advice.dart';
 import 'package:romio/view/widgets/custom_expanded.dart';
-import 'package:romio/view/widgets/custom_gesterdetector.dart';
+
 import 'package:romio/view/widgets/drawer_widget.dart';
 
 
@@ -59,9 +57,9 @@ class _HomePageState extends State<HomePage> {
     ),
 
 
-      drawer: DrawerWidget(),
+      drawer: const DrawerWidget(),
       child: Scaffold(
-        backgroundColor: Colors.deepPurple,
+       // backgroundColor: Colors.deepPurple,
         appBar: AppBar(
           leading: IconButton(
             onPressed: _handleMenuButtonPressed,
@@ -78,10 +76,10 @@ class _HomePageState extends State<HomePage> {
               },
             ),
           ),
-          title: const Text(
+          title:  Text(
             'الاعاقه العقليه',
             style: TextStyle(
-                color: Colors.black, fontSize: 25, fontFamily: 'Dancing Script'),
+                color: Colors.black, fontSize: SizeConfig.defaultSize*3, ),
           ),
           centerTitle: true,
           flexibleSpace: Container(
@@ -93,75 +91,89 @@ class _HomePageState extends State<HomePage> {
             ])),
           ),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-          child: SingleChildScrollView(
+        body: Stack(
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Colors.cyan,
+                    Colors.pink
+
+                  ]
+                )
+              ),
+
+            ),
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize*1.2,vertical: SizeConfig.defaultSize*1.2,),
+              child: SingleChildScrollView(
       child: AnimationLimiter(
       child: Column(
-            children: AnimationConfiguration.toStaggeredList(
-            duration: const Duration(milliseconds: 1700),
+                children: AnimationConfiguration.toStaggeredList(
+                duration: const Duration(milliseconds: 1700),
       childAnimationBuilder: (widget) => SlideAnimation(
        verticalOffset: 200,
-          child: FadeInAnimation(
-            child: widget,
-          ),
+              child: FadeInAnimation(
+                child: widget,
+              ),
       ),
       children:[
 
 
-          Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+              Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
 
 
-              CustomExpanded(
-                img: 'assets/images/tips_and_advice/1.png',
-                text: 'النصائح والارشادات',
-                onTap: () {
-                  Navigator.pushNamed(context, AdviceHome.id);
-                },
+                  CustomExpanded(
+                    img: 'assets/images/tips_and_advice/1.png',
+                    text: 'النصائح والارشادات',
+                    onTap: () {
+                      Navigator.pushNamed(context, AdviceHome.id);
+                    },
+                  ),
+                   SizedBox(
+                    width:   SizeConfig.defaultSize * 1,
+
+                  ),
+                  CustomExpanded
+                    (
+                    img: 'assets/images/mental_retardation/a1.jpg',
+                    text: ' الاعاقه العقليه',
+                    onTap: () {
+                      Navigator.pushNamed(context, MentalHome.id);
+                    },
+                  ),
+                ],
               ),
+              SizedBox(
+                height: SizeConfig.defaultSize * 1,
+              ),
+              Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomExpanded(
+
+                    img: 'assets/images/academic_skills/d1.jfif',
+                    text: 'مهارات اكاديميه',
+                    onTap: () {
+                      Navigator.pushNamed(context, SkillsAcademic.id);
+                    },
+                  ),
                SizedBox(
-                width:   SizeConfig.defaultSize * 1,
-
+                    width:   SizeConfig.defaultSize * 1,
+                  ),
+                  CustomExpanded
+                    (
+                    img: 'assets/images/life_skills/c1.png',
+                    text: 'مهارات حياتيه',
+                    onTap: () {
+                      Navigator.pushNamed(context, LifeSkills.id);
+                    },
+                  ),
+                ],
               ),
-              CustomExpanded
-                (
-                img: 'assets/images/mental_retardation/a1.jpg',
-                text: ' الاعاقه العقليه',
-                onTap: () {
-                  Navigator.pushNamed(context, MentalHome.id);
-                },
-              ),
-            ],
-          ),
-          SizedBox(
-            height: SizeConfig.defaultSize * 1,
-          ),
-          Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CustomExpanded(
-
-                img: 'assets/images/academic_skills/d1.jfif',
-                text: 'مهارات اكاديميه',
-                onTap: () {
-                  Navigator.pushNamed(context, SkillsAcademic.id);
-                },
-              ),
-           SizedBox(
-                width:   SizeConfig.defaultSize * 1,
-              ),
-              CustomExpanded
-                (
-                img: 'assets/images/life_skills/c1.png',
-                text: 'مهارات حياتيه',
-                onTap: () {
-                  Navigator.pushNamed(context, LifeSkills.id);
-                },
-              ),
-            ],
-          ),
 
     ],
     ),
@@ -169,6 +181,8 @@ class _HomePageState extends State<HomePage> {
     ),
 
     ),
+            ),
+          ],
         )));
   }
   void _handleMenuButtonPressed() {

@@ -14,11 +14,14 @@ import '../widgets/stack.dart';
 class Classification extends StatelessWidget {
   static String id = 'cla';
 
+  const Classification({Key? key}) : super(key: key);
+
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey,
         appBar: AppBar(
           title: const Text('الفئات'),
         ),
@@ -30,7 +33,7 @@ class Classification extends StatelessWidget {
 
               ),
                Container(
-                 padding: const EdgeInsetsDirectional.only(top: 15,end: 8,start: 2,bottom: 5) ,
+                 padding:  EdgeInsetsDirectional.only(top: SizeConfig.defaultSize *3,end: SizeConfig.defaultSize *.5,start:  SizeConfig.defaultSize *.5,bottom: SizeConfig.defaultSize *1) ,
                  child: SizedBox
                    (
                   height: SizeConfig.defaultSize *7,

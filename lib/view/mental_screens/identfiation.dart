@@ -7,9 +7,12 @@ import '../widgets/stack.dart';
 class Identifiation extends StatelessWidget {
 static  String id='ide';
 
+  const Identifiation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(title: const Text('التعريف'),),
       body: Column(
         children: [
@@ -21,15 +24,15 @@ static  String id='ide';
 
                 itemBuilder: (context,index){
                 return Container(
-                  padding: const EdgeInsetsDirectional.only(top: 15,end: 8,start: 2,bottom: 5) ,
-                  margin: const EdgeInsetsDirectional.only(top: 10,end: 8,start: 2,bottom: 5),
+                  padding:  EdgeInsetsDirectional.only(top: SizeConfig.defaultSize *3,end: SizeConfig.defaultSize *.5,start:  SizeConfig.defaultSize *.5,bottom: SizeConfig.defaultSize *1) ,
+                  margin:  EdgeInsetsDirectional.only(top: SizeConfig.defaultSize *1.2,end: SizeConfig.defaultSize *1,start: SizeConfig.defaultSize *1,bottom: SizeConfig.defaultSize *2),
                   child: Column
                     (
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(data[index].domain1.toString(),style: const TextStyle(color: Colors.red,fontSize: 22,fontWeight: FontWeight.bold),textDirection: TextDirection.rtl,),
+                      Text(data[index].domain1.toString(),style:  TextStyle(color: Colors.red,fontSize:  SizeConfig.defaultSize *3,fontWeight: FontWeight.bold),textDirection: TextDirection.rtl,),
                       Text
-                        (data[index].text1.toString(),style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.black45),textDirection: TextDirection.rtl,)
+                        (data[index].text1.toString(),style:  TextStyle(fontSize:  SizeConfig.defaultSize *2.6,fontWeight: FontWeight.bold,color: Colors.black45),textDirection: TextDirection.rtl,)
 
                     ],
                   ),

@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../service/responsive_service.dart';
 import '../widgets/stack.dart';
+
 class VeryExtreme extends StatelessWidget {
-static String id='ver';
+  static String id = 'ver';
+
+  const VeryExtreme({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,30 +14,43 @@ static String id='ver';
       appBar: AppBar(
         title: const Text('حاده'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Stackk(
-              img: 'assets/images/v3.jpg',
-              // pos1: 50,
-              // pos2: 50,
-              // num1: 200,
-              // num2: 300,
+      body: Stack(
+        children: [
+          Container(
+            decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                    colors: [Colors.pinkAccent, Colors.amberAccent])),
+          ),
+          SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Stackk(
+                  img: 'assets/images/v3.jpg',
+
+                ),
+                SizedBox(
+                  height: SizeConfig.defaultSize * 10,
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.only(
+                      end: SizeConfig.defaultSize * 1,
+                      start: SizeConfig.defaultSize * 1),
+                  child: Text(
+                    '''درجة ذكائهم اقل من 25
+تعتبر اشد درجات الاعاقة العقلية وهي غير قادرة على التعليم ولا التدريب ولا التاهيل بسبب اعاقتهم الشديدة واعتمادهم على الاخرين في جميع شؤونهم العامة والخاصة وغير مدركين للزمان او المكان والاشخاص وهم بحاجة الي رعاية واهتمام دائم وبصفة خاصة .
+                 
+                      ''',
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                        fontSize: SizeConfig.defaultSize * 3,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
             ),
-            SizedBox(height: SizeConfig.defaultSize*10,),
-            const Padding(
-              padding: EdgeInsetsDirectional.only(end: 10,start: 3),
-              child: Text('''درجة ذكائهم اقل من 25
-تعتبر اشد درجات االعاقة العقلية وهي غير قادرة على التعليم وال التدريب وال التاهيل بسبب 
-اعاقتهم الشديدة واعتمادهم على االخرين في جميع شؤونهم العامة والخاصة وغير مدركين 
-للزمان او المكان واالشخاص وهم بحاجة الي رعاية واهتمام دائم وبصفة خاصة .
-              
-                            
-                  ''',textDirection: TextDirection.rtl,style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-            )
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:romio/service/responsive_service.dart';
+
 class CustomGesterDetector extends StatelessWidget {
-CustomGesterDetector({required this.onTap,required this.text,required this.iconData});
+CustomGesterDetector({Key? key, required this.onTap,required this.text,required this.iconData}) : super(key: key);
   Function()? onTap;
   String text;
   late IconData iconData;

@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 import '../../service/responsive_service.dart';
 class CustomExpanded extends StatelessWidget {
-  CustomExpanded({required this.img,required this.text,required this.onTap});
+  CustomExpanded({Key? key, required this.img,required this.text,required this.onTap}) : super(key: key);
  String ? img;
  String ? text;
  Function()? onTap;
@@ -19,18 +19,18 @@ class CustomExpanded extends StatelessWidget {
           width: SizeConfig.defaultSize * .25,
                  height: SizeConfig.defaultSize * 20,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(SizeConfig.defaultSize * 2),
               image: DecorationImage(
                   image: AssetImage(img!),
                   fit: BoxFit.cover)),
           child: Padding(
-            padding: const EdgeInsetsDirectional.only(end: 5,bottom: 3),
+            padding:  EdgeInsetsDirectional.only(top: SizeConfig.defaultSize *3,end: SizeConfig.defaultSize *1.3,start:  SizeConfig.defaultSize *.5,bottom: SizeConfig.defaultSize *.7) ,
             child: FittedBox(
               child: Text(
                 text!,
                 style: TextStyle(
                     color: Colors.black.withOpacity(1),
-                    fontSize: 3 * SizeConfig.blockSizeVertical  ,
+                    fontSize: SizeConfig.blockSizeVertical  * 3  ,
                     fontWeight: FontWeight.bold),
               ),
             ),

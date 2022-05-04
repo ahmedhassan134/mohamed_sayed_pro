@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:romio/models/obj/about_the_faculty.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 
 import '../../../service/responsive_service.dart';
 
@@ -19,12 +19,7 @@ class AppPresenter extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Image.asset(
-          //   'assets/images/four.jpg',
-          //   width: double.infinity,
-          //   height: double.infinity,
-          //   fit: BoxFit.cover,
-          // ),
+
           Container(
             margin: EdgeInsets.symmetric(
                 horizontal: SizeConfig.defaultSize * 1,
@@ -41,7 +36,7 @@ class AppPresenter extends StatelessWidget {
                     Colors.deepPurple
                   ]
               ),
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(SizeConfig.defaultSize * 2),
             ),
             child: Column(
               children: [
@@ -56,10 +51,10 @@ class AppPresenter extends StatelessWidget {
                     SizedBox(
                       width: SizeConfig.defaultSize * 1,
                     ),
-                    const Expanded(
+                     Expanded(
                       child: Text(
-                        'كليه علوم ذوي الاحتياجات الخاصه جامعه بني سويف ',
-                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        'كليه علوم ذوي الاحتياجات الخاصه جامعه بني سويف طلاب  (الاعاقه العقليه) ',
+                        style: TextStyle(fontSize: SizeConfig.defaultSize * 1.7, fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -115,8 +110,8 @@ class AppPresenter extends StatelessWidget {
                           Expanded(
                             child: Text(
                               facultyList[index].text,
-                              style: const TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
+                              style:  TextStyle(
+                                  fontSize: SizeConfig.defaultSize*2, fontWeight: FontWeight.bold),
                             ),
                             flex: 1,
                           ),
@@ -134,15 +129,4 @@ class AppPresenter extends StatelessWidget {
     );
   }
 
-  Future<void> _makePhoneCall(String phoneNumber) async {
-    // Use `Uri` to ensure that `phoneNumber` is properly URL-encoded.
-    // Just using 'tel:$phoneNumber' would create invalid URLs in some cases,
-    // such as spaces in the input, which would cause `launch` to fail on some
-    // platforms.
-    final Uri launchUri = Uri(
-      scheme: 'tel',
-      path: phoneNumber,
-    );
-    await launch(launchUri.toString());
-  }
 }
