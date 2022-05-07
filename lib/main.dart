@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
      // initialRoute:PaageView.id,
-      home:  SplashScreen(),
+      home:  const SplashScreen(),
 
       routes: {
 

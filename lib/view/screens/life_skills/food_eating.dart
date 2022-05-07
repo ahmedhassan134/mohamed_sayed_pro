@@ -2,10 +2,12 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:romio/models/classes/food_eating.dart';
-
+import 'package:romio/models/classes/math.dart';
 import 'package:romio/service/responsive_service.dart';
 import 'package:romio/view/widgets/floating_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+import '../../../models/classes/women.dart';
 
 class FoodEating extends StatelessWidget {
   FoodEating({Key? key}) : super(key: key);
@@ -84,7 +86,7 @@ class FoodEating extends StatelessWidget {
               }),
         ],
       ),
-      floatingActionButton: const FloatingWidget(
+      floatingActionButton: FloatingWidget(
         heroTag: 'food_eating',
         urll: 'https://youtu.be/Ci1Mk9xtHUg',
       )

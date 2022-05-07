@@ -18,6 +18,6 @@ List<PersonModel> facultyList=[
   PersonModel(img: 'assets/images/drawer/who_we_are/amira_ahmed.jpg', text: 'اميره احمد حسن '),
 
   PersonModel(img: 'assets/images/drawer/who_we_are/safinaz_mohamed.jpg', text: 'صافيناز محممد '),
-  PersonModel(img: 'assets/images/drawer/who_we_are/malak_mohsen.png', text: 'ملك محسن حمدالله'),
+  PersonModel(img: 'assets/images/drawer/who_we_are/malak_mohsen.jpg', text: 'ملك محسن حمدالله'),
 
 ];

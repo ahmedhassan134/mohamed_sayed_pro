@@ -35,7 +35,7 @@ class CustomPlaces extends StatelessWidget {
                 text1,
                 style:  TextStyle(
                     color: Colors.white,
-                    fontSize: SizeConfig.defaultSize * 3,
+                    fontSize: SizeConfig.defaultSize * 2.3,
                     fontWeight: FontWeight.bold),textDirection: TextDirection.rtl,
               ),
             ),
@@ -65,7 +65,7 @@ class CustomPlaces extends StatelessWidget {
                   Text(
                     text2,
                     style:  TextStyle(
-                        fontSize: SizeConfig.defaultSize * 3,
+                        fontSize: SizeConfig.defaultSize * 2.5,
                         fontWeight: FontWeight.bold,
                         color: Colors.white
                     ),
@@ -74,7 +74,7 @@ class CustomPlaces extends StatelessWidget {
                   Text(
                     'مركز :  $text4',
                     style:  TextStyle(
-                        fontSize: SizeConfig.defaultSize * 3,
+                        fontSize: SizeConfig.defaultSize * 2.5,
                         fontWeight: FontWeight.bold,
                         color: Colors.white
                     ),
@@ -84,7 +84,7 @@ class CustomPlaces extends StatelessWidget {
                   Text(
                     'رقم الهاتف :  $text3',
                     style:  TextStyle(
-                        fontSize: SizeConfig.defaultSize * 3,
+                        fontSize: SizeConfig.defaultSize * 2.5,
                         fontWeight: FontWeight.bold,
                         color: Colors.white
                     ),

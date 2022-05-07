@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:romio/home_page.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../service/responsive_service.dart';
 import '../screens/drawer/who_we_are.dart';
@@ -108,8 +109,8 @@ class DrawerWidget extends StatelessWidget {
                             );
 
                             var url = params.toString();
-                            if (await canLaunch(url)) {
-                              await launch(url);
+                            if (await canLaunchUrlString(url)) {
+                              await launchUrlString(url);
                             } else {
                               throw 'Could not launch $url';
                             }

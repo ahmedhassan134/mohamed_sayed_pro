@@ -20,7 +20,7 @@ List<WomenModel> womenList=[
   WomenModel(img: 'assets/images/clothes/women/14.jpg', sound: 'w14.mp3'),
   WomenModel(img: 'assets/images/clothes/women/15.jpg', sound: 'w15.mp3'),
   WomenModel(img: 'assets/images/clothes/women/16.jpg', sound: 'w16.mp3'),
-  WomenModel(img: 'assets/images/clothes/women/17.jpg', sound: 'w17.mp3'),
+  WomenModel(img: 'assets/images/clothes/women/177.jpg', sound: 'w17.mp3'),
   WomenModel(img: 'assets/images/clothes/women/18.jpg', sound: 'w18.mp3'),
 
 

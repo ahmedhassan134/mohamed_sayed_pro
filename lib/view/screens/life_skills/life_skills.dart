@@ -9,8 +9,6 @@ import '../../../service/responsive_service.dart';
 class LifeSkills extends StatelessWidget {
   static String id='life_skills';
 
-  const LifeSkills({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);

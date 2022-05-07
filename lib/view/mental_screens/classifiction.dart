@@ -39,9 +39,13 @@ class Classification extends StatelessWidget {
                   height: SizeConfig.defaultSize *7,
               ),
                ),
+
               CustomContainer((){
+
                 Navigator.pushNamed(context, Simple.id);
+
               }, 'بسيطه'),
+
               CustomContainer((){
                 Navigator.pushNamed(context, Medium.id);
               }, 'متوسطه'),

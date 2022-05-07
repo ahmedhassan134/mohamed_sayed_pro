@@ -6,7 +6,7 @@ import 'package:romio/view/screens/life_skills/colthes_wearing.dart';
 
 import 'package:romio/view/widgets/custom_container.dart';
 
-
+import 'mens.dart';
 class Clothes extends StatelessWidget {
   const Clothes({Key? key}) : super(key: key);
 
