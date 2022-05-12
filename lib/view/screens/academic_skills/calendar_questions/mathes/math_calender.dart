@@ -4,6 +4,7 @@ import 'package:romio/view/screens/academic_skills/calendar_questions/mathes.dar
 import '../../../../../service/responsive_service.dart';
 import '../../../../widgets/custom_container.dart';
 import '../arabic/match.dart';
+import 'math_match.dart';
 class MathCalender extends StatelessWidget {
   const MathCalender({Key? key}) : super(key: key);
 
@@ -35,7 +36,7 @@ class MathCalender extends StatelessWidget {
               CustomContainer((){
                 Navigator.push(context,
                     MaterialPageRoute(builder: (BuildContext context) {
-                      return const ArabicMatching();
+                      return const MathMatch();
                     }));
 
               }, 'التوصيل'),

@@ -17,7 +17,7 @@ static String id='splashh';
       duration: 4000,
       imageSize: 200,
 
-      imageSrc: "assets/images/8.jpg",
+      imageSrc: "assets/images/life_skills/c1.png",
       text: "الاعاقه العقليه",
       textType: TextType.ColorizeAnimationText,
       textStyle:  TextStyle(

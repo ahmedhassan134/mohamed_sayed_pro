@@ -16,11 +16,7 @@ class VeryExtreme extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [Colors.pinkAccent, Colors.amberAccent])),
-          ),
+
           SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,

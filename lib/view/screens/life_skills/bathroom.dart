@@ -1,7 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:romio/models/classes/bathroom.dart';
-import 'package:romio/models/classes/math.dart';
+
 import 'package:romio/service/responsive_service.dart';
 
 import '../../widgets/floating_widget.dart';
@@ -85,7 +85,7 @@ class Bathroom extends StatelessWidget {
       floatingActionButton: Container(
         padding:  EdgeInsetsDirectional.only(top: SizeConfig.defaultSize *3,end: SizeConfig.defaultSize *.6,start:  SizeConfig.defaultSize *3,bottom:SizeConfig.defaultSize *1, ) ,
         alignment: Alignment.bottomLeft,
-        child: FloatingWidget(
+        child: const FloatingWidget(
           heroTag: 'bathroom',
           urll: '  https://youtu.be/PJhi_2lMzLM',
         ),

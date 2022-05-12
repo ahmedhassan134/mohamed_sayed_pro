@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
+import 'package:romio/view/screens/academic_skills/calendar_questions/mathes.dart';
 
 import 'package:romio/view/screens/academic_skills/calendar_questions/mathes/math_calender.dart';
+import 'package:romio/view/screens/academic_skills/math.dart';
 
 import 'package:romio/view/widgets/custom_container.dart';
 
@@ -40,7 +42,7 @@ class CalenderQuestion extends StatelessWidget {
               CustomContainer((){
                 Navigator.push(context,
                     MaterialPageRoute(builder: (BuildContext context) {
-                      return const MathCalender();
+                      return  const MathCalender();
                     }));
 
               }, 'حساب'),

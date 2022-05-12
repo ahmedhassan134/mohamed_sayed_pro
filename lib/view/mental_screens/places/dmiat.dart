@@ -62,18 +62,7 @@ class Damiat extends StatelessWidget {
                       text3: '01024245737',
                       text4: 'كفر سعد ',
                     ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
+
 
                   ],
                 ),

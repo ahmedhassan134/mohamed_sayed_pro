@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import 'mens.dart';
+
 class ClothesWearing extends StatelessWidget {
   const ClothesWearing({Key? key}) : super(key: key);
 

@@ -23,4 +23,6 @@ class FloatingWidget extends StatelessWidget {
       child: Icon(Icons.video_call,color: Colors.white,size: SizeConfig.defaultSize* 4,),
     );
   }
+
+
 }

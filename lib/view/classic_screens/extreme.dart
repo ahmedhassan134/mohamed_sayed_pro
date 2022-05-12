@@ -15,18 +15,7 @@ static String id='ex';
       ),
       body:Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [
-                      Colors.tealAccent,
-                      Colors.deepPurple
 
-                    ]
-                )
-            ),
-
-          ),
           SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,

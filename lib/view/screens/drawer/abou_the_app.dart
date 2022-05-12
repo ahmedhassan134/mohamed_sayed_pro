@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../service/responsive_service.dart';
+
 class AboutApp extends StatelessWidget {
   static String id = 'aboutApp';
 
@@ -19,51 +21,61 @@ class AboutApp extends StatelessWidget {
         children: [
           Expanded(
             child: Container(
-              margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              margin: EdgeInsets.symmetric(
+                  horizontal: SizeConfig.defaultSize * 1,
+                  vertical: SizeConfig.defaultSize * 1),
+              padding: EdgeInsets.symmetric(
+                  horizontal: SizeConfig.defaultSize * 1,
+                  vertical: SizeConfig.defaultSize * 2),
               width: double.infinity,
               height: MediaQuery.of(context).size.height * .9,
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(20)),
+                  color: Colors.grey.shade200,
+                  borderRadius:
+                      BorderRadius.circular(SizeConfig.defaultSize * 1.5)),
               child: SingleChildScrollView(
                 child: Column(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
+                      children: [
                         // Expanded(child: Image.asset('assets/images/bns.png')),
                         CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage('assets/images/bns.png'),
+                          radius: SizeConfig.defaultSize * 3,
+                          backgroundImage:
+                              const AssetImage('assets/images/bns.png'),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: SizeConfig.defaultSize * 1,
                         ),
                         Expanded(
                           child: Text(
-                            'كليه علوم ذوي الاحتياجات الخاصه جامعه بني سويف ',
+                            'كليه علوم ذوي الاحتياجات الخاصه جامعه بني سويف طلاب  (الاعاقه العقليه) ',
                             style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
+                                fontSize: SizeConfig.defaultSize * 1.7,
+                                fontWeight: FontWeight.bold),
                             textAlign: TextAlign.center,
                           ),
                         ),
                         SizedBox(
-                          width: 10,
+                          width: SizeConfig.defaultSize * 1,
                         ),
                         CircleAvatar(
-                          radius: 30,
+                          radius: SizeConfig.defaultSize * 3,
                           backgroundImage:
-                              AssetImage('assets/images/bns2.jfif'),
+                              const AssetImage('assets/images/bns2.jfif'),
                         ),
                       ],
                     ),
-                    const SizedBox(
-                      height: 20,
+                    SizedBox(
+                      height: SizeConfig.defaultSize * 3,
                     ),
-                    const Text(
-                      '   الجميع من بنى ماضى مركز ببا محافظه بنى سويف طرف اول بائعيين وكلا من عائشه حسن اسماعيل اسماء حسن اسماعيلوفاء حسن اسماعيلايمان حسن اسماعيل \محمد حسن اسماعيل\احمد حسن اسماعيل\ايه حسن اسماعيل\عبد الرحمن حسن اسماعيل الجميع من بنى ماضى مركز ببا محافظه بنى سويف طرف ثانى مشترى 													تمهيد								حيث يمتلك الطرف الاول البائع عما هو الاتى وصفا وتفصيلا 1\منزل مكون من دوريين مبنى بالطوب الاحمر والبلوك ومصبوب بالخشب يقع زمام قريه بنى ماضى مركز ببا على مساحه 80 متر تقريبا ومحدد بحدود اربعه الحد القبلى شارع الحد البحرى سيد محمد ضيف الله الحد الغربى شارع الحد الشرقى ورثه اسماعيل خليل فيزالله ويقدر بمبلغ 150000 فقط مائه وخمسون الف جنيه 2\منزل مكون من خمس طوابق مبنى من الاعمده الخراسنيه والطوب الاحمر يقع بزمام بندر بنى سويف شارع المعاون المفرع  من شارع البوصه الجزيره المرتفعه على مساحه 65 متر تقريبا محدد بحدود اربعه الحد القبلى شارع المعاون الحد البحرى منزل غريب عبدالله الحد الشرقى منزل  عبده جنيدى الحد الغربى منزل حمدان حسن ويقدر بمبلغ 700000 فقط سبعمائه الف جنيه 3منزل مكون من اربع طوابق مبنى بالبلوك والخرسان يقع بناحيه الشيخ على قريه بياض العرب مركز بنى سويف على مساحه 170 متر تقريبا محدد بحدود اربعه الحد القبلى شارع الحد البحرى طه محمود سالم الحد الغربى وضع يد اخرون الحد الشرقى وضع يد اخرون ويقدر بمبلغ 700000 فقط سبعمائه الف جنيه 4\قطعه ارض محاطه بسور من البلوك  على مساحه 100متر تقريبا بزمام قريه بنى ماضى مركز ببا محافظه بنى سويف محدده بحدود اربعه الحد البحرى شارع الحد القبلى ورثه عبدالعزيز الخشن الحد الغربى ايمن محمود الحد الشرقى عفاف احمد سيد ويقدر بمبلغ 200000 فقط مائتى الف جنيه  وبعد ان اقر الطرفان فيما بينهما بالتصرف بالبيع من الطرف الاول البائع  الى الطرف الثانى المشترى اتفقا على البنود الاتيه 								البند الاول يعتبر التمهيد السابق وصفا وتفصيلا جزء لا يتجزاء من بنود العقد وتعتبر اى اوراق او عقود سابقه لتاريخ هذا العقد لاغيه ولا يجوز العمل بها 				البند الثانى تم البيع ',
+                    Text(
+                      '''يصبو تطبيق الإعاقة العقلية إلي تعريفك على  قدرات وإمكانات الطفل ذوي الاعاقة العقلية ، ثم ينقلك الي كيفية تعليمه وتنمية مهاراته فالتطبيق يسعى إلى مساعدة ولي الأمر بشكل خاص وفريق العمل القائم على رعاية الطفل بشكل عام فهو يساعد ولي الأمر على معرفةابنه المعاق فكريا بشكل صحيح من خلال معرفتة للاعاقة العقلية وسمات المعاقين وفئاتهم وكيفية التعامل معهم 
+ويساعد الاخصائي على كيفية تشخيص الطفل 
+ثم بعد ذلك انتقل التطبيق الي أكثر المهارات التي يحتاجها الفرد المعاق ذهنيا وهي المهارات الحياتية وذلك من خلال تعليمه كيفية تناول الطعام وأدوات تناوله وتعليمه غسل اليدين وارتداء الملابس بعد تعريفه عليها وراعى التطبيق الفئتين (ذكر ،انثى) وتعليمة كيف يقضي حاجته عند دخول المرحاض ثم بعد ذلك انتقل التطبيق بالطفل الي مستوى التعليم الأكاديمي المتمثل في تعليمة الارقام من 15:1عددا وكميا وتعليمه الحروف الابجديه مع وجود اسئلة تقويمية للطفل متبعة بتعزيز لتحفيز الطفل على الاستمرار ويقدم التطبيق نصائح لكل من يتعامل مع الفرد المعاق ذهنيا سواء ولي الأمر أو الاخصائي وكذلك المجتمع فهدفنا نحن طلاب كلية علوم ذوي الاحتياجات الخاصة بجامعة بني سويف قسم الإعاقة العقلية تحقيق أكبر استفادة ممكنه من قدرات المعاقين ذهنيا واستثمار طاقتهم المكبوته في تنمية قدراتهم ومساعدة ولي الأمر على فهم ابنه بشكل صحيح وتوجيه قدراته .''',
                       textDirection: TextDirection.rtl,
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(fontSize: SizeConfig.defaultSize * 2,fontWeight: FontWeight.bold),
                     )
                   ],
                 ),

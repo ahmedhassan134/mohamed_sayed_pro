@@ -3,11 +3,15 @@ import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:romio/view/screens/life_skills/bathroom.dart';
 import 'package:romio/view/screens/life_skills/clothes.dart';
 import 'package:romio/view/screens/life_skills/food_eating.dart';
+import 'package:romio/view/screens/life_skills/food_eating/food_eating_home_screen.dart';
+import 'package:romio/view/screens/life_skills/food_eating/hand_washing.dart';
 import 'package:romio/view/widgets/custom_stack.dart';
 
 import '../../../service/responsive_service.dart';
 class LifeSkills extends StatelessWidget {
   static String id='life_skills';
+
+  LifeSkills({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +48,7 @@ class LifeSkills extends StatelessWidget {
 
                       SizedBox(height: SizeConfig.defaultSize),
                       CustomStack(onTap: (){
-                        Navigator.pushNamed(context,FoodEating.id);
+                        Navigator.pushNamed(context,ClothesHomeScreen.id);
                       }, text:'تناول الطعام', img: 'assets/images/life_skills/c2.png',
                         s1:  SizeConfig.defaultSize * 3,
                         s2:  SizeConfig.defaultSize * 1,
@@ -52,7 +56,7 @@ class LifeSkills extends StatelessWidget {
                       ),
                       CustomStack(onTap: (){
                         Navigator.pushNamed(context, Bathroom.id);
-                      }, text:'دخول الحمام', img: 'assets/images/life_skills/c3.jpg',
+                      }, text:'استخدام المرحاض', img: 'assets/images/life_skills/c3.jpg',
 
                         ),
                       CustomStack(onTap: (){

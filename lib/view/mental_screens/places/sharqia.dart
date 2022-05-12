@@ -40,42 +40,7 @@ class Sharqia extends StatelessWidget {
                       text3: '01066135272',
                       text4: 'الزقازيق',
                     ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
+
 
                   ],
                 ),

@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:romio/models/obj/about_the_faculty.dart';
+import 'package:romio/models/obj/who_we_are.dart';
 
 
 import '../../../service/responsive_service.dart';

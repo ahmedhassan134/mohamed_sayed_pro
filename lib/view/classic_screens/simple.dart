@@ -14,18 +14,7 @@ static String id='simp';
       ),
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [
-                      Colors.lightBlueAccent,
-                      Colors.blueGrey
 
-                    ]
-                )
-            ),
-
-          ),
           SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,

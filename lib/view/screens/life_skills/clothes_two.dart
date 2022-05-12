@@ -7,7 +7,7 @@ import 'mens.dart';
 class ClothesTwo extends StatelessWidget {
   const ClothesTwo({Key? key}) : super(key: key);
 
-  static String id='clothestwo';
+  static String id='clothestwoo';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -10,20 +10,23 @@ class  CustomGesterDetectorDrawer extends StatelessWidget {
   late IconData iconData;
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize*.6),
+      child: Row(
 
-      children: [
-        Expanded
+        children: [
+          Expanded
 
-          (child: Icon(iconData,size: 35,),flex: 1,),
-        SizedBox(width: SizeConfig.defaultSize* 2,),
-        Expanded(
-          child: GestureDetector(
-            onTap: onTap,
-            child: Text(text,style: const TextStyle(color: Colors.white,fontSize: 30,fontWeight: FontWeight.bold),),
-          ),flex: 3,
-        ),
-      ],
+            (child: Icon(iconData,size: SizeConfig.defaultSize* 4,),flex: 1,),
+          SizedBox(width: SizeConfig.defaultSize* 2,),
+          Expanded(
+            child: GestureDetector(
+              onTap: onTap,
+              child: Text(text,style:  TextStyle(color: Colors.white,fontSize:SizeConfig.defaultSize* 3,fontWeight: FontWeight.bold),),
+            ),flex: 3,
+          ),
+        ],
+      ),
     );
   }
 }

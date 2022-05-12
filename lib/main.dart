@@ -30,6 +30,9 @@ import 'package:romio/view/screens/life_skills/clothes_tako_off.dart';
 import 'package:romio/view/screens/life_skills/clothes_two.dart';
 import 'package:romio/view/screens/life_skills/colthes_wearing.dart';
 import 'package:romio/view/screens/life_skills/food_eating.dart';
+import 'package:romio/view/screens/life_skills/food_eating/food_eating_home_screen.dart';
+import 'package:romio/view/screens/life_skills/food_eating/hand_washing.dart';
+import 'package:romio/view/screens/life_skills/food_eating/sections.dart';
 import 'package:romio/view/screens/life_skills/life_skills.dart';
 import 'package:romio/view/screens/life_skills/mens.dart';
 import 'package:romio/view/screens/life_skills/women.dart';
@@ -84,10 +87,10 @@ class MyApp extends StatelessWidget {
 
         HomePage.id:(context)=>const HomePage(),
         MentalHome.id:(context)=> const MentalHome(),
-        AdviceHome.id:(context)=>AdviceHome(),
+        AdviceHome.id:(context)=>const AdviceHome(),
         LifeSkills.id:(context)=>LifeSkills(),
         SkillsAcademic.id:(context)=>const SkillsAcademic(),
-        SplashScreen.id:(context)=>SplashScreen(),
+        SplashScreen.id:(context)=>const SplashScreen(),
         // FacultyPage.id:(context)=>FacultyPage(),
         // PeoplePage.id:(context)=>PeoplePage(),
         AboutApp.id:(context)=>const AboutApp(),
@@ -103,7 +106,7 @@ class MyApp extends StatelessWidget {
         EquilibriumCurve.id:(context)=>const EquilibriumCurve(),
         Math.id:(context)=>Math(),
         Arabic.id:(context)=>const Arabic(),
-        FoodEating.id:(context)=>FoodEating(),
+        //FoodEating.id:(context)=>FoodEating(),
         Bathroom.id:(context)=>Bathroom(),
         Clothes.id:(context)=>const Clothes(),
         Mens.id:(context)=>Mens(),
@@ -114,7 +117,11 @@ class MyApp extends StatelessWidget {
         Places.id:(context)=>const Places(),
         CalenderQuestion.id:(context)=>const CalenderQuestion(),
         CalenderArabic.id:(context)=>const CalenderArabic(),
-        CalenderMath.id:(context)=>const CalenderMath()
+        CalenderMath.id:(context)=>const CalenderMath(),
+        HandWashing.id:(context)=>const HandWashing(),
+        ClothesHomeScreen.id:(context)=>const ClothesHomeScreen(),
+        Sections.id:(context)=>Sections(),
+       FoodEatingTwo.id:(context)=>const FoodEatingTwo()
 
 
       },

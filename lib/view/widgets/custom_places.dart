@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 
 import '../../service/responsive_service.dart';
@@ -81,14 +82,20 @@ class CustomPlaces extends StatelessWidget {
                     textDirection: TextDirection.rtl,
                   ),
                   SizedBox(height: SizeConfig.defaultSize *.3,),
-                  Text(
-                    'رقم الهاتف :  $text3',
-                    style:  TextStyle(
-                        fontSize: SizeConfig.defaultSize * 2.5,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white
+                  GestureDetector(
+                    onTap: ()async{
+                      await  _makePhoneCall(text3);
+
+                    },
+                    child: Text(
+                      'رقم الهاتف :  $text3',
+                      style:  TextStyle(
+                          fontSize: SizeConfig.defaultSize * 2.5,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white
+                      ),
+                      textDirection: TextDirection.rtl,
                     ),
-                    textDirection: TextDirection.rtl,
                   ),
                   SizedBox(height: SizeConfig.defaultSize *.3,),
 
@@ -100,5 +107,16 @@ class CustomPlaces extends StatelessWidget {
         SizedBox(height: SizeConfig.defaultSize * 3,)
       ],
     );
+  }
+  Future<void> _makePhoneCall(String phoneNumber) async {
+    // Use `Uri` to ensure that `phoneNumber` is properly URL-encoded.
+    // Just using 'tel:$phoneNumber' would create invalid URLs in some cases,
+    // such as spaces in the input, which would cause `launch` to fail on some
+    // platforms.
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: phoneNumber,
+    );
+    await launch(launchUri.toString());
   }
 }

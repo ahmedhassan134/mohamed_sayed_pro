@@ -89,7 +89,7 @@ class MentalHome extends StatelessWidget {
                       CustomStack(onTap: (){
                         Navigator.pushNamed(context, Places.id);
 
-                      }, text: 'اماكن تقديم الخدمه', img:'assets/images/mental_retardation/a7.jpg'),
+                      }, text: 'اماكن تقديم الخدمه', img:'assets/images/mental_retardation/map.jpeg'),
 
 
                     ],

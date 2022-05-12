@@ -16,18 +16,7 @@ class Medium extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Container(
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [
-                      Colors.lightGreenAccent,
-                      Colors.pinkAccent
 
-                    ]
-                )
-            ),
-
-          ),
           SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,

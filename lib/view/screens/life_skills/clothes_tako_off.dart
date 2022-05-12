@@ -82,7 +82,7 @@ class ClothesTakeOff extends StatelessWidget {
 
         ],
       ),
-        floatingActionButton: FloatingWidget(
+        floatingActionButton: const FloatingWidget(
           heroTag: 'clothes_take_oof',
           urll: 'https://youtu.be/WZbh1A-xhzk',
         ),

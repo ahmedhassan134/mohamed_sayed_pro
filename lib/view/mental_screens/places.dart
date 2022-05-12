@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:romio/view/mental_screens/places/sharqia.dart';
 import 'package:romio/view/mental_screens/places/alex.dart';
 import 'package:romio/view/mental_screens/places/assuot.dart';
 import 'package:romio/view/mental_screens/places/aswan.dart';
@@ -25,7 +26,7 @@ import 'package:romio/view/mental_screens/places/portsaid.dart';
 import 'package:romio/view/mental_screens/places/qena.dart';
 import 'package:romio/view/mental_screens/places/red_sea.dart';
 import 'package:romio/view/mental_screens/places/seuz.dart';
-import 'package:romio/view/mental_screens/places/sharqia.dart';
+
 import 'package:romio/view/mental_screens/places/sohag.dart';
 import 'package:romio/view/mental_screens/places/south_of_sinai.dart';
 import 'package:romio/view/mental_screens/places/wadi_el_gdid.dart';

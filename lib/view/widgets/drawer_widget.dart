@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:romio/home_page.dart';
+import 'package:romio/view/screens/drawer/abou_the_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -31,9 +32,9 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     height: SizeConfig.defaultSize * 5,
                   ),
-                  CircleAvatar(
-                    radius: SizeConfig.defaultSize * 5, // Image radius
-                  ),
+                  // CircleAvatar(
+                  //   radius: SizeConfig.defaultSize * 5, // Image radius
+                  // ),
                   SizedBox(
                     height: SizeConfig.defaultSize * 1,
                   ),
@@ -69,61 +70,65 @@ class DrawerWidget extends StatelessWidget {
                   CustomGesterDetectorDrawer(
                       iconData: Icons.app_blocking,
                       onTap: () {
+                        Navigator.pushNamed(context, AboutApp.id);
 
                       },
                       text: ' نبذة عن التطبيق  '),
-                  Row(
-                    children: [
-                      Expanded(
+                  Container(
+                    margin: EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize*.6),
+                    child: Row(
+                      children: [
+                        Expanded(
 
-                        child: IconButton(
-                          onPressed: () async {
-                            final Uri params = Uri(
-                              scheme: 'mailto',
-                              path: 'Mohamedshahalb1999@gmail.com',
-                              query:
-                              'subject=App Feedback&body=App Version 3.23', //add subject and body here
-                            );
+                          child: IconButton(
+                            onPressed: () async {
+                              final Uri params = Uri(
+                                scheme: 'mailto',
+                                path: 'Mohamedshahalb1999@gmail.com',
+                                query:
+                                'subject=App Feedback&body=App Version 3.23', //add subject and body here
+                              );
 
-                            var url = params.toString();
-                            if (await  canLaunch(url)) {
-                              await launch(url);
-                            } else {
-                              throw 'Could not launch $url';
-                            }
-                          },
-                          icon: Icon(
-                            Icons.outgoing_mail,
-                            size: SizeConfig.defaultSize * 4,
-                          ),),
-                        flex: 1,
-                      ),
-                      Expanded(
-                        child: TextButton(
-                          onPressed: () async {
-                            final Uri params = Uri(
-                              scheme: 'mailto',
-                              path: 'Mohamedshahalb1999@gmail.com',
-                              query:
-                              'subject=App Feedback&body=App Version 3.23', //add subject and body here
-                            );
-
-                            var url = params.toString();
-                            if (await canLaunchUrlString(url)) {
-                              await launchUrlString(url);
-                            } else {
-                              throw 'Could not launch $url';
-                            }
-                          },
-                          child: Text('غرفة التواصل ',
-                              style: TextStyle(
-                                  fontSize: SizeConfig.defaultSize * 3,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold)),
+                              var url = params.toString();
+                              if (await  canLaunch(url)) {
+                                await launch(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
+                            icon: Icon(
+                              Icons.outgoing_mail,
+                              size: SizeConfig.defaultSize * 4,
+                            ),),
+                          flex: 1,
                         ),
-                        flex: 3,
-                      )
-                    ],
+                        Expanded(
+                          child: TextButton(
+                            onPressed: () async {
+                              final Uri params = Uri(
+                                scheme: 'mailto',
+                                path: 'Mohamedshahalb1999@gmail.com',
+                                query:
+                                'subject=App Feedback&body=App Version 3.23', //add subject and body here
+                              );
+
+                              var url = params.toString();
+                              if (await canLaunchUrlString(url)) {
+                                await launchUrlString(url);
+                              } else {
+                                throw 'Could not launch $url';
+                              }
+                            },
+                            child: Text('غرفة التواصل ',
+                                style: TextStyle(
+                                    fontSize: SizeConfig.defaultSize * 3,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold)),
+                          ),
+                          flex: 3,
+                        )
+                      ],
+                    ),
                   ),
                   CustomGesterDetectorDrawer(
                       iconData: Icons.share,
@@ -142,4 +147,6 @@ class DrawerWidget extends StatelessWidget {
       ),
     );
   }
+
 }
+

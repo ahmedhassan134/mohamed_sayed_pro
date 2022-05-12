@@ -84,12 +84,12 @@ class Math extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children:  [
 
-          FloatingWidget(
+          const FloatingWidget(
             heroTag: 'one',
             urll: '  https://youtu.be/SDiT0royrC8',
           ),
           SizedBox(height: SizeConfig.defaultSize *.6,),
-          FloatingWidget(
+          const FloatingWidget(
             heroTag: 'two',
             urll: '  https://youtu.be/SDiT0royrC8',
           ),

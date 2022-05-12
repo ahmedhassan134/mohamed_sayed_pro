@@ -56,24 +56,7 @@ class Giza extends StatelessWidget {
                       text3: '01279326762',
                       text4: 'الوراق',
                     ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
-                    CustomPlaces(
-                      text1: '',
-                      text2: '',
-                      text3: '',
-                      text4: '',
-                    ),
+
 
                   ],
                 ),
