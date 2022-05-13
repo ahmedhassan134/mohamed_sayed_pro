@@ -15,9 +15,10 @@ static String id='splashh';
     return SplashScreenView(
       navigateRoute: const HomePage(),
       duration: 4000,
-      imageSize: 200,
+      imageSize: 400,
 
-      imageSrc: "assets/images/life_skills/c1.png",
+
+      imageSrc: "assets/images/app_icon.jpg",
       text: "الاعاقه العقليه",
       textType: TextType.ColorizeAnimationText,
       textStyle:  TextStyle(

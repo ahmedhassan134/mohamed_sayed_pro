@@ -5,14 +5,15 @@ import 'package:romio/models/classes/mens.dart';
 import 'package:romio/service/responsive_service.dart';
 
 class Mens extends StatelessWidget {
-  Mens ({Key? key}) : super(key: key);
+  const Mens ({Key? key}) : super(key: key);
   static String id = 'math';
-  AudioCache player = AudioCache(prefix: 'assets/sounds/mens/');
-  AudioPlayer aud =  AudioPlayer();
+
 
 
   @override
   Widget build(BuildContext context) {
+    AudioCache player = AudioCache(prefix: 'assets/sounds/mens/');
+
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
@@ -22,7 +23,7 @@ class Mens extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/two.jpg',
+            'assets/images/four.jpg',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,

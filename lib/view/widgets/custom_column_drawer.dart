@@ -4,25 +4,25 @@ import '../../service/responsive_service.dart';
 
 
 class  CustomGesterDetectorDrawer extends StatelessWidget {
-  CustomGesterDetectorDrawer({Key? key, required this.onTap,required this.text,required this.iconData}) : super(key: key);
-  Function()? onTap;
-  String text;
-  late IconData iconData;
+  const CustomGesterDetectorDrawer({Key? key, required this.onTap,required this.text,required this.iconData}) : super(key: key);
+  final Function()? onTap;
+  final String text;
+  final IconData iconData;
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize*.6),
+      margin: EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize*.2),
       child: Row(
 
         children: [
           Expanded
 
-            (child: Icon(iconData,size: SizeConfig.defaultSize* 4,),flex: 1,),
+            (child: Icon(iconData,size: SizeConfig.defaultSize* 3.5,),flex: 1,),
           SizedBox(width: SizeConfig.defaultSize* 2,),
           Expanded(
             child: GestureDetector(
               onTap: onTap,
-              child: Text(text,style:  TextStyle(color: Colors.white,fontSize:SizeConfig.defaultSize* 3,fontWeight: FontWeight.bold),),
+              child: Text(text,style:  TextStyle(color: Colors.white,fontSize:SizeConfig.defaultSize* 2.4,fontWeight: FontWeight.bold),),
             ),flex: 3,
           ),
         ],

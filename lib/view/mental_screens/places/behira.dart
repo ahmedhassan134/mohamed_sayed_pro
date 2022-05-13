@@ -15,7 +15,7 @@ class Elbehira extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(
+          const Stackk(
             img: 'assets/images/places/bhira.jpg',
           ),
           SizedBox(

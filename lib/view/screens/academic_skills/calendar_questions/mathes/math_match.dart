@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
 
@@ -186,7 +186,12 @@ class _MathMatchState extends State<MathMatch> {
                   // textColor: Colors.white,
                   // color: Colors.pink,
 
-                  child: const Text("New Game"),
+                  child: Container(
+                      alignment: Alignment.center,
+                      width: SizeConfig.defaultSize *18,
+                      height: SizeConfig.defaultSize *5 ,
+                      color: Colors.blue,
+                      child:  FittedBox(child: Text("New Game",style: TextStyle(color: Colors.white,fontSize:SizeConfig.defaultSize *2.4 ,fontWeight: FontWeight.bold),))),
                   onTap: ()
                   {
                     initGame();

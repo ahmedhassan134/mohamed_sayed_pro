@@ -15,7 +15,7 @@ class Giza extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/giza.jpg', ),
+          const Stackk(img:'assets/images/places/giza.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

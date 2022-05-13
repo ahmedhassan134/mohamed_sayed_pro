@@ -3,7 +3,7 @@ import 'package:romio/service/responsive_service.dart';
 import 'package:romio/view/screens/life_skills/food_eating.dart';
 import 'package:romio/view/screens/life_skills/food_eating/hand_washing.dart';
 import 'package:romio/view/screens/life_skills/food_eating/sections.dart';
-import 'package:romio/view/screens/life_skills/women.dart';
+
 import 'package:romio/view/widgets/custom_container.dart';
 
 class ClothesHomeScreen extends StatelessWidget {

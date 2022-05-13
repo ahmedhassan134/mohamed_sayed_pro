@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
-import 'package:romio/view/screens/academic_skills/calendar_questions/mathes.dart';
+
 
 import 'package:romio/view/screens/academic_skills/calendar_questions/mathes/math_calender.dart';
-import 'package:romio/view/screens/academic_skills/math.dart';
+
 
 import 'package:romio/view/widgets/custom_container.dart';
 
@@ -24,7 +24,7 @@ class CalenderQuestion extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/five.jpg',
+            'assets/images/four.jpg',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../service/responsive_service.dart';
 class Stackk extends StatelessWidget {
-  Stackk({Key? key, required this.img,this.num1, this.num2, this.pos1,this.pos2}) : super(key: key);
+  const Stackk({Key? key, required this.img,this.num1, this.num2, this.pos1,this.pos2}) : super(key: key);
   final String img;
-  double?  num1;
-   double? num2;
-  double ?pos1;
-   double ?pos2;
+  final double?  num1;
+   final double? num2;
+  final double ?pos1;
+   final double ?pos2;
 
   @override
   Widget build(BuildContext context) {

@@ -15,7 +15,7 @@ class Suez extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/seuz.jpg', ),
+          const Stackk(img:'assets/images/places/seuz.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

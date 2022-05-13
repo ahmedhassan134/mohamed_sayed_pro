@@ -18,7 +18,7 @@ static String id='pro';
       body: Column(
         children: [
 
-          Stackk(img:'assets/images/mental_retardation/a3.jpg', ),
+          const Stackk(img:'assets/images/mental_retardation/a3.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: ListView.builder(

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomGesterDetector extends StatelessWidget {
-CustomGesterDetector({Key? key, required this.onTap,required this.text,required this.iconData}) : super(key: key);
-  Function()? onTap;
-  String text;
-  late IconData iconData;
+const CustomGesterDetector({Key? key, required this.onTap,required this.text,required this.iconData}) : super(key: key);
+ final Function()? onTap;
+  final String text;
+  final IconData iconData;
   @override
   Widget build(BuildContext context) {
     return Row(

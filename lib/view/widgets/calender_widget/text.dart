@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../service/responsive_service.dart';
 class TextCircualrAvatar extends StatelessWidget {
-  TextCircualrAvatar({Key? key,required this.margeStart,@required this.margeTop,required this.text}) : super(key: key);
-  double ? margeTop;
-  double margeStart;
-  String text;
+  const TextCircualrAvatar({Key? key,required this.margeStart,@required this.margeTop,required this.text}) : super(key: key);
+  final double ? margeTop;
+  final double margeStart;
+  final String text;
 
   @override
   Widget build(BuildContext context) {

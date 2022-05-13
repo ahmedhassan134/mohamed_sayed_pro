@@ -15,7 +15,7 @@ class Matrooh extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/matroh.jpg', ),
+          const Stackk(img:'assets/images/places/matroh.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

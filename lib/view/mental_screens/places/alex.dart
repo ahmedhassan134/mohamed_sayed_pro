@@ -16,7 +16,7 @@ class Alex extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(
+          const Stackk(
             img: 'assets/images/places/alex.jpg',
           ),
           SizedBox(

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
 
@@ -43,12 +43,8 @@ class _ArabicMatchingState extends State<ArabicMatching> {
       ItemModels(name: 'ث', value: 'ث', img: 'assets/images/alphabetic/4.jpg'),
       ItemModels(name: 'س', value: 'س', img: 'assets/images/alphabetic/12.jpg'),
       ItemModels(name: 'د', value: 'د', img: 'assets/images/alphabetic/8.jpg'),
-      ItemModels(name: 'ط', value: 'ط', img: 'assets/images/alphabetic/16.jpg'),
-      ItemModels(name: 'ن', value: 'ن', img: 'assets/images/alphabetic/25.jpg'),
-      ItemModels(name: 'م', value: 'م', img: 'assets/images/alphabetic/24.jpg'),
-      ItemModels(name: 'ب', value: 'ب', img: 'assets/images/alphabetic/2 .jpg'),
-      ItemModels(name: 'ي', value: 'ي', img: 'assets/images/alphabetic/28.jpg'),
-      ItemModels(name: 'ز', value: 'ز', img: 'assets/images/alphabetic/11.jpg'),
+
+
     ];
     items2 = List<ItemModels>.from(items);
     items.shuffle();
@@ -192,7 +188,12 @@ class _ArabicMatchingState extends State<ArabicMatching> {
                   // textColor: Colors.white,
                   // color: Colors.pink,
 
-                  child: const Text("New Game"),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: SizeConfig.defaultSize *18,
+                      height: SizeConfig.defaultSize *5 ,
+                      color: Colors.blue,
+                      child:  FittedBox(child: Text("New Game",style: TextStyle(color: Colors.white,fontSize:SizeConfig.defaultSize *2.4 ,fontWeight: FontWeight.bold),))),
                   onTap: ()
                   {
                     initGame();
@@ -217,7 +218,7 @@ class _ArabicMatchingState extends State<ArabicMatching> {
     });
   }
   String result(){
-    if(score>=70){
+    if(score>=40){
       ss('success.wav');
 
       return 'Awesome!';

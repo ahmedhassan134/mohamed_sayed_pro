@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
 import 'package:url_launcher/url_launcher.dart';
+
 class FloatingWidget extends StatelessWidget {
-  const FloatingWidget({Key? key,required this.urll,required this.heroTag}) : super(key: key);
+   const FloatingWidget({Key? key,required this.urll,required this.heroTag}) : super(key: key);
   final String heroTag;
+
+
 
   final String urll;
   @override
@@ -12,12 +15,12 @@ class FloatingWidget extends StatelessWidget {
       heroTag: heroTag,
       backgroundColor: Colors.red,
       onPressed: () async {
-        var  url = urll;
+         Uri  url = Uri.parse(urll);
         // var urrr= LaunchUrl('https://www.youtube.com');
-        if (await canLaunch(url)) {
-          await launch(url, forceWebView: false);
+        if (await canLaunchUrl(url)) {
+          await launchUrl(url, );
         } else {
-          throw 'Could not launch $url';
+          throw   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('wrong url ')));
         }
       },
       child: Icon(Icons.video_call,color: Colors.white,size: SizeConfig.defaultSize* 4,),

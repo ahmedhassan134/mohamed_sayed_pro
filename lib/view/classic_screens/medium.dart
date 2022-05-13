@@ -21,7 +21,7 @@ class Medium extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Stackk(
+                const Stackk(
                   img: 'assets/images/v5.jpg',
 
                 ),

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:romio/view/screens/life_skills/bathroom.dart';
 import 'package:romio/view/screens/life_skills/clothes.dart';
-import 'package:romio/view/screens/life_skills/food_eating.dart';
+
 import 'package:romio/view/screens/life_skills/food_eating/food_eating_home_screen.dart';
-import 'package:romio/view/screens/life_skills/food_eating/hand_washing.dart';
+
 import 'package:romio/view/widgets/custom_stack.dart';
 
 import '../../../service/responsive_service.dart';
 class LifeSkills extends StatelessWidget {
   static String id='life_skills';
 
-  LifeSkills({Key? key}) : super(key: key);
+  const LifeSkills({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class LifeSkills extends StatelessWidget {
         body: Stack(
           children: [
             Image.asset(
-              'assets/images/five.jpg',
+              'assets/images/four.jpg',
               width: double.infinity,
               height: double.infinity,
               fit: BoxFit.cover,

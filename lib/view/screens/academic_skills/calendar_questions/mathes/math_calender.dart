@@ -3,7 +3,7 @@ import 'package:romio/view/screens/academic_skills/calendar_questions/mathes.dar
 
 import '../../../../../service/responsive_service.dart';
 import '../../../../widgets/custom_container.dart';
-import '../arabic/match.dart';
+
 import 'math_match.dart';
 class MathCalender extends StatelessWidget {
   const MathCalender({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class MathCalender extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/five.jpg',
+            'assets/images/four.jpg',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,

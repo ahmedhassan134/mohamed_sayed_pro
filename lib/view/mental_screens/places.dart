@@ -70,7 +70,7 @@ class _HomeScreenState extends State<Places > {
                   child: AnimationLimiter(
                       child: Column(
                         children: AnimationConfiguration.toStaggeredList(
-                          duration: const Duration(milliseconds: 1700),
+                          duration: const Duration(milliseconds: 1100),
                           childAnimationBuilder: (widget) => SlideAnimation(
                             horizontalOffset: 200,
                             child: FadeInAnimation(

@@ -15,7 +15,7 @@ class Aswan extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/aswan.jpg', ),
+          const Stackk(img:'assets/images/places/aswan.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

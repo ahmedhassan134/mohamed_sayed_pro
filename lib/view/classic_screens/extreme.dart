@@ -20,7 +20,7 @@ static String id='ex';
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Stackk(
+                const Stackk(
                   img: 'assets/images/v4.webp',
 
                 ),

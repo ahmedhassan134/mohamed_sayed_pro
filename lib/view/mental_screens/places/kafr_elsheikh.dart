@@ -15,7 +15,7 @@ class KafrElsheikh extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/kafr_elsheikh.jpg', ),
+          const Stackk(img:'assets/images/places/kafr_elsheikh.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

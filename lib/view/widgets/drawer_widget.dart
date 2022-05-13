@@ -1,7 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:romio/home_page.dart';
 import 'package:romio/view/screens/drawer/abou_the_app.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../service/responsive_service.dart';
@@ -24,7 +25,7 @@ class DrawerWidget extends StatelessWidget {
           ),
           SingleChildScrollView(
             child: Container(
-              padding:  EdgeInsetsDirectional.only(start:SizeConfig.defaultSize * .7),
+              padding:  EdgeInsetsDirectional.only(start:SizeConfig.defaultSize * .7,end:SizeConfig.defaultSize * .7, ),
               alignment: Alignment.topLeft,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -32,19 +33,21 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     height: SizeConfig.defaultSize * 5,
                   ),
-                  // CircleAvatar(
-                  //   radius: SizeConfig.defaultSize * 5, // Image radius
-                  // ),
+                  CircleAvatar(
+                    radius: SizeConfig.defaultSize * 6,
+                    backgroundImage: const AssetImage('assets/images/app_icon.jpg'),// Image radius
+                  ),
                   SizedBox(
                     height: SizeConfig.defaultSize * 1,
                   ),
-                   Text(
-                    'دليلك في التخاطب',
+                  Text(
+                    'الاعاقه العقليه',
                     style: TextStyle(
-                        fontSize: SizeConfig.defaultSize * 2.3,
+                        fontSize: SizeConfig.defaultSize * 2.2,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
+
                   SizedBox(
                     height: SizeConfig.defaultSize * 5,
                   ),
@@ -75,7 +78,7 @@ class DrawerWidget extends StatelessWidget {
                       },
                       text: ' نبذة عن التطبيق  '),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: SizeConfig.defaultSize*.6),
+                    margin: EdgeInsetsDirectional.only(start: SizeConfig.defaultSize*.2,end: SizeConfig.defaultSize*.6 ),
                     child: Row(
                       children: [
                         Expanded(
@@ -90,15 +93,15 @@ class DrawerWidget extends StatelessWidget {
                               );
 
                               var url = params.toString();
-                              if (await  canLaunch(url)) {
-                                await launch(url);
+                              if (await canLaunchUrlString(url)) {
+                                await launchUrlString(url);
                               } else {
                                 throw 'Could not launch $url';
                               }
                             },
                             icon: Icon(
                               Icons.outgoing_mail,
-                              size: SizeConfig.defaultSize * 4,
+                              size: SizeConfig.defaultSize * 3.5,
                             ),),
                           flex: 1,
                         ),
@@ -121,7 +124,7 @@ class DrawerWidget extends StatelessWidget {
                             },
                             child: Text('غرفة التواصل ',
                                 style: TextStyle(
-                                    fontSize: SizeConfig.defaultSize * 3,
+                                    fontSize: SizeConfig.defaultSize * 2.4,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold)),
                           ),

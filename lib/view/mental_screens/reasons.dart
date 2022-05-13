@@ -17,7 +17,7 @@ class Reasons extends StatelessWidget {
       body: Column(
         children: [
 
-          Stackk(img:'assets/images/mental_retardation/a2.jpg', ),
+          const Stackk(img:'assets/images/mental_retardation/a2.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: ListView.builder(

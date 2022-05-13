@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
 
 import '../../../models/classes/arabic.dart';
+import '../../widgets/floating_widget.dart';
 
 class Arabic extends StatefulWidget {
   const Arabic({Key? key}) : super(key: key);
@@ -37,7 +38,7 @@ class _ArabicState extends State<Arabic> {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/two.jpg',
+            'assets/images/four.jpg',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -96,6 +97,27 @@ class _ArabicState extends State<Arabic> {
                 );
               }),
         ],
+      ),
+      floatingActionButton: Container(
+        alignment: Alignment.bottomLeft,
+        padding: EdgeInsetsDirectional.only(start: SizeConfig.defaultSize *2,end: SizeConfig.defaultSize *.5,bottom:SizeConfig.defaultSize *.5,),
+        margin:EdgeInsetsDirectional.only(start: SizeConfig.defaultSize *2,end: SizeConfig.defaultSize *.5,bottom:SizeConfig.defaultSize *.5, ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children:  [
+
+             const FloatingWidget(
+              heroTag: 'one',
+              urll: 'https://youtu.be/dV10JUEWG38',
+            ),
+            SizedBox(height: SizeConfig.defaultSize *.9,),
+             const FloatingWidget(
+              heroTag: 'two',
+              urll: 'https://youtu.be/aNNUdNhpSB8',
+            ),
+
+          ],
+        ),
       ),
     );
   }

@@ -15,7 +15,7 @@ class Luxor extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/luxor.jpg', ),
+          const Stackk(img:'assets/images/places/luxor.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

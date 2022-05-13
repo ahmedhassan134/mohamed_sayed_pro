@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../service/responsive_service.dart';
 class NonTextCircularAvatar extends StatelessWidget {
-   NonTextCircularAvatar({Key? key,required this.margeStart,@required this.margeTop}) : super(key: key);
-  double ? margeTop;
-  double margeStart;
+   const NonTextCircularAvatar({Key? key,required this.margeStart,@required this.margeTop}) : super(key: key);
+ final double ? margeTop;
+  final double margeStart;
   @override
   Widget build(BuildContext context) {
     return   Container(

@@ -16,7 +16,7 @@ class BainSuef extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(
+          const Stackk(
             img: 'assets/images/places/bns.jpg',
           ),
           SizedBox(

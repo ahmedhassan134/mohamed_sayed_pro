@@ -86,10 +86,11 @@ class _HomePageState extends State<HomePage> {
             ),
             body: Stack(
               children: [
-                Container(
-                  decoration: const BoxDecoration(
-                      gradient:
-                          LinearGradient(colors: [Colors.cyan, Colors.pink])),
+                Image.asset(
+                  'assets/images/four.jpg',
+                  width: double.infinity,
+                  height: double.infinity,
+                  fit: BoxFit.cover,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(

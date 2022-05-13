@@ -81,9 +81,9 @@ class AppPresenter extends StatelessWidget {
 
                     gridDelegate:  const SliverGridDelegateWithMaxCrossAxisExtent(
                       childAspectRatio: .8,
-                      crossAxisSpacing: 6,
+                      crossAxisSpacing: 10,
                       mainAxisSpacing: 8,
-                      maxCrossAxisExtent: 200,
+                      maxCrossAxisExtent: 300,
 
                     ),
                     itemBuilder: (context, index) {

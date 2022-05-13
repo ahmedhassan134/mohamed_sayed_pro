@@ -16,7 +16,7 @@ static  String id='ide';
       appBar: AppBar(title: const Text('التعريف'),),
       body: Column(
         children: [
-          Stackk(img:'assets/images/mental_retardation/a1.jpg', ),
+          const Stackk(img:'assets/images/mental_retardation/a1.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: ListView.builder(

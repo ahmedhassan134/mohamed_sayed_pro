@@ -18,7 +18,7 @@ class Personality extends StatelessWidget {
       body: Column(
         children: [
 
-          Stackk(img:'assets/images/mental_retardation/a5.jpg' ),
+          const Stackk(img:'assets/images/mental_retardation/a5.jpg' ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: ListView.builder(

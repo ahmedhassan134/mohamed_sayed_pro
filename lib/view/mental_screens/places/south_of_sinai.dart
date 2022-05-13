@@ -15,7 +15,7 @@ class SouthOfSinai extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/sinai.jpg', ),
+          const Stackk(img:'assets/images/places/sinai.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

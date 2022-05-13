@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
 class CustomStack extends StatelessWidget {
-   CustomStack({Key? key, required this.onTap,required this.text,required this.img,this.s1,this.s2,this.clr}) : super(key: key);
+   const CustomStack({Key? key, required this.onTap,required this.text,required this.img,this.s1,this.s2,this.clr}) : super(key: key);
 
-  Function()? onTap;
-  String ? img;
-  String ? text;
-  double ? s1;
-  double ? s2;
-  Color ?clr;
+  final Function()? onTap;
+  final String ? img;
+ final String ? text;
+  final double ? s1;
+  final double ? s2;
+  final Color ?clr;
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);

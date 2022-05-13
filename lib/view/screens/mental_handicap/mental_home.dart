@@ -24,23 +24,17 @@ class MentalHome extends StatelessWidget {
       ),
         body: Stack(
           children: [
-            Container(
-              decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: [
-                        Colors.purple,
-                        Colors.deepPurpleAccent
-
-                      ]
-                  )
-              ),
-
+            Image.asset(
+              'assets/images/four.jpg',
+              width: double.infinity,
+              height: double.infinity,
+              fit: BoxFit.cover,
             ),
             SingleChildScrollView(
               child: AnimationLimiter(
                 child: Column(
                   children: AnimationConfiguration.toStaggeredList(
-                    duration: const Duration(milliseconds: 1400),
+                    duration: const Duration(milliseconds: 1100),
                     childAnimationBuilder: (widget) => SlideAnimation(
                       horizontalOffset: 200,
                       child: FadeInAnimation(

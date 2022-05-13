@@ -37,7 +37,7 @@ class Clothes extends StatelessWidget {
               }, 'ارتداء الملابس '),
               CustomContainer((){
                 Navigator.pushNamed(context, ClothesTakeOff.id);
-              }, 'خلع الملابس'),
+              }, 'نزع الملابس'),
 
             ],
           ),

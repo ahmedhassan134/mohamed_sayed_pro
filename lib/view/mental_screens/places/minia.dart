@@ -15,7 +15,7 @@ class Menia extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/minia.jpg', ),
+          const Stackk(img:'assets/images/places/minia.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

@@ -5,15 +5,16 @@ import 'package:romio/models/classes/women.dart';
 import 'package:romio/service/responsive_service.dart';
 
 class Women extends StatelessWidget {
-  Women({Key? key}) : super(key: key);
+  const Women({Key? key}) : super(key: key);
   static String id='women';
 
-  AudioCache player = AudioCache(prefix: 'assets/sounds/women/');
-  AudioPlayer aud =  AudioPlayer();
 
 
   @override
   Widget build(BuildContext context) {
+
+    AudioCache player = AudioCache(prefix: 'assets/sounds/women/');
+
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
@@ -23,7 +24,7 @@ class Women extends StatelessWidget {
       body: Stack(
         children: [
           Image.asset(
-            'assets/images/five.jpg',
+            'assets/images/four.jpg',
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,

@@ -15,7 +15,7 @@ class PortSaid extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/portsaid.jpg', ),
+          const Stackk(img:'assets/images/places/portsaid.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(

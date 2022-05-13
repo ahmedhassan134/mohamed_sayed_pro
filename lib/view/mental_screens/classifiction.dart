@@ -28,7 +28,7 @@ class Classification extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Stackk(
+              const Stackk(
                 img: 'assets/images/mental_retardation/a4.jpg',
 
               ),

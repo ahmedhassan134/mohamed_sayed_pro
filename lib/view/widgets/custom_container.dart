@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
 class CustomContainer extends StatelessWidget {
-  CustomContainer(this.onTap,this.title, {Key? key}) : super(key: key);
-Function()? onTap;
-String ? title;
+  const CustomContainer(this.onTap,this.title, {Key? key}) : super(key: key);
+final Function()? onTap;
+final String ? title;
 
   @override
   Widget build(BuildContext context) {

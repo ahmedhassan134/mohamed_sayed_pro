@@ -15,7 +15,7 @@ class Kharbia extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Stackk(img:'assets/images/places/kharbia.jpg', ),
+          const Stackk(img:'assets/images/places/kharbia.jpg', ),
           SizedBox(       height: SizeConfig.defaultSize * 5,),
           Expanded(
             child: SingleChildScrollView(
