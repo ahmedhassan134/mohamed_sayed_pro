@@ -15,20 +15,19 @@ class Arabic extends StatefulWidget {
 }
 
 class _ArabicState extends State<Arabic> {
-  AudioCache player = AudioCache(prefix: 'assets/sounds/alphabetic/');
 
-  AudioPlayer aud = AudioPlayer();
+
+  final audioPlayer = AudioPlayer(playerId: 'my_unique_playerId');
   @override
-  Future<void>dispose()async  {
+  void dispose(){
+    audioPlayer.stop();
     super.dispose();
-  await aud.stop();
-    //change here
-
 
   }
 
   @override
   Widget build(BuildContext context) {
+    AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/alphabetic/');
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(

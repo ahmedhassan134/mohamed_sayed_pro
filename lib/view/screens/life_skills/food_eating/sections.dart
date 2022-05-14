@@ -8,16 +8,25 @@ import 'package:romio/service/responsive_service.dart';
 import 'package:romio/view/widgets/floating_widget.dart';
 
 
-class Sections extends StatelessWidget {
+class Sections extends StatefulWidget {
   const Sections({Key? key}) : super(key: key);
   static String id = 'Sections';
 
+  @override
+  State<Sections> createState() => _SectionsState();
+}
 
+class _SectionsState extends State<Sections> {
+  final audioPlayer = AudioPlayer(playerId: 'my_unique_playerId');
+  @override
+  void dispose(){
+    audioPlayer.stop();
+    super.dispose();
 
-
+  }
   @override
   Widget build(BuildContext context) {
-    AudioCache player = AudioCache(prefix: 'assets/sounds/food_eating/');
+    AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/food_eating/');
 
     return Scaffold(
         backgroundColor: Colors.red,
@@ -98,5 +107,4 @@ class Sections extends StatelessWidget {
         )
     );
   }
-
 }

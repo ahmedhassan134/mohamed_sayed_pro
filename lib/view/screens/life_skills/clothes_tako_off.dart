@@ -7,14 +7,27 @@ import '../../../models/classes/clothes_take_off.dart';
 
 import '../../widgets/floating_widget.dart';
 
-class ClothesTakeOff extends StatelessWidget {
+class ClothesTakeOff extends StatefulWidget {
    const ClothesTakeOff({Key? key}) : super(key: key);
 
   static String id='clothestakeoff';
 
   @override
+  State<ClothesTakeOff> createState() => _ClothesTakeOffState();
+}
+
+class _ClothesTakeOffState extends State<ClothesTakeOff> {
+
+  final audioPlayer = AudioPlayer(playerId: 'my_unique_playerId');
+@override
+  void dispose(){
+  audioPlayer.stop();
+  super.dispose();
+
+}
+  @override
   Widget build(BuildContext context) {
-    AudioCache player = AudioCache(prefix: 'assets/sounds/take_off/');
+    AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/take_off/');
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -71,19 +84,20 @@ class ClothesTakeOff extends StatelessWidget {
                         child: Padding(
                           padding:  EdgeInsetsDirectional.only(top: SizeConfig.defaultSize *3,end: SizeConfig.defaultSize *.6,start:  SizeConfig.defaultSize *1,bottom:SizeConfig.defaultSize *1, ) ,
                           child: IconButton(
-                              onPressed: () {
+                              onPressed: ()async {
                                 player.play(takeOffClothes[index].sound);
 
+
+
                               },
-                              icon:  Icon(
-                                Icons.play_arrow,
-                                size: SizeConfig.defaultSize*6,
-                                color: Colors.blue,
-                              )),
+                              icon: Icon(
+                  Icons.play_arrow,
+                  size: SizeConfig.defaultSize*6,
+                  color: Colors.blue,),
                         ),
                       ),
 
-                    ],
+                      )],
                   );
                 }),
 

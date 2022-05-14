@@ -5,15 +5,27 @@ import 'package:romio/service/responsive_service.dart';
 
 import '../../widgets/floating_widget.dart';
 
-class Math extends StatelessWidget {
+class Math extends StatefulWidget {
   const Math({Key? key}) : super(key: key);
   static String id = 'mathht';
 
+  @override
+  State<Math> createState() => _MathState();
+}
 
+class _MathState extends State<Math> {
+  final audioPlayer = AudioPlayer(playerId: 'my_unique_playerId');
+
+  @override
+  void dispose(){
+    audioPlayer.stop();
+    super.dispose();
+
+  }
 
   @override
   Widget build(BuildContext context) {
-    AudioCache player = AudioCache(prefix: 'assets/sounds/numbers/');
+    AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/numbers/');
 
     return Scaffold(
       backgroundColor: Colors.red,
@@ -100,5 +112,4 @@ class Math extends StatelessWidget {
       ),
     );
   }
-
 }

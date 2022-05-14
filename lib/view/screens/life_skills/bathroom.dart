@@ -6,15 +6,27 @@ import 'package:romio/service/responsive_service.dart';
 
 import '../../widgets/floating_widget.dart';
 
-class Bathroom extends StatelessWidget {
+class Bathroom extends StatefulWidget {
   const Bathroom({Key? key}) : super(key: key);
 
   static String id = 'bathroom';
 
   @override
+  State<Bathroom> createState() => _BathroomState();
+}
+
+class _BathroomState extends State<Bathroom> {
+  final audioPlayer = AudioPlayer(playerId: 'my_unique_playerId');
+  @override
+  void dispose(){
+    audioPlayer.stop();
+    super.dispose();
+
+  }
+  @override
   Widget build(BuildContext context) {
 
-    AudioCache player = AudioCache(prefix: 'assets/sounds/bathroom/');
+    AudioCache player = AudioCache( fixedPlayer: audioPlayer,prefix: 'assets/sounds/bathroom/');
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
@@ -105,6 +117,4 @@ class Bathroom extends StatelessWidget {
     );
 
   }
-
-
 }

@@ -91,7 +91,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'الاسكندريه',
                               clr1: Colors.red,
-                              clr2: Colors.blue,
+                              clr2: Colors.red,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -106,7 +106,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'اسيوط',
                               clr1: Colors.green.shade900,
-                              clr2: Colors.greenAccent,
+                              clr2: Colors.green.shade900,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -120,7 +120,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'اسوان',
-                              clr1: Colors.red,
+                              clr1: Colors.deepPurple,
                               clr2: Colors.deepPurple,
                             ),
                             CustomContainerPlaces(
@@ -135,7 +135,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'البحيره',
-                              clr1: Colors.red.shade500,
+                              clr1: Colors.yellowAccent,
                               clr2: Colors.yellowAccent,
                             ),
                             CustomContainerPlaces(
@@ -151,7 +151,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'بني سويف',
                               clr1: Colors.green,
-                              clr2: Colors.pink.shade800,
+                              clr2: Colors.green,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -165,7 +165,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'القاهره',
-                              clr1: Colors.blue.shade900,
+                              clr1: Colors.orange,
                               clr2: Colors.orange,
                             ),
                             CustomContainerPlaces(
@@ -181,7 +181,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'الدقهليه',
                               clr1: Colors.tealAccent,
-                              clr2: Colors.deepPurple,
+                              clr2: Colors.tealAccent,
                             ),
                             CustomContainerPlaces(
                                 onTap: () {
@@ -196,7 +196,7 @@ class _HomeScreenState extends State<Places > {
                                 },
                               text: 'دمياط',
                               clr1:  Colors.grey.shade900,
-                              clr2:  Colors.amberAccent
+                              clr2:  Colors.grey.shade900,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -211,7 +211,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'الفيوم',
                               clr1: Colors.blueAccent,
-                              clr2: Colors.tealAccent,
+                              clr2: Colors.blueAccent,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -225,7 +225,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'الجيزه',
-                              clr1: Colors.deepOrangeAccent,
+                              clr1: Colors.pink,
                               clr2: Colors.pink,
                             ),
                             CustomContainerPlaces(
@@ -240,7 +240,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'الاسماعيليه',
-                              clr1: Colors.lightGreenAccent,
+                              clr1: Colors.purpleAccent,
                               clr2: Colors.purpleAccent,
                             ),
                             CustomContainerPlaces(
@@ -256,7 +256,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'كفر الشيخ',
                               clr1: Colors.brown,
-                              clr2: Colors.greenAccent,
+                              clr2: Colors.brown,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -270,8 +270,8 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'القليوبيه',
-                              clr1: Colors.deepPurple,
-                              clr2: Colors.orange,
+                              clr1: Colors.orange.shade300,
+                              clr2: Colors.orange.shade300,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -285,7 +285,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'الغربيه',
-                              clr1: Colors.black,
+                              clr1: Colors.lightGreen,
                               clr2: Colors.lightGreen,
                             ),
                             CustomContainerPlaces(
@@ -300,8 +300,8 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'الاقصر',
-                              clr1: Colors.red,
-                              clr2: Colors.blue,
+                              clr1: Colors.black,
+                              clr2: Colors.black,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -316,7 +316,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'مرسي مطروح',
                               clr1: Colors.green.shade900,
-                              clr2: Colors.greenAccent,
+                              clr2: Colors.green.shade900,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -330,8 +330,8 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'المنيا',
-                              clr1: Colors.red,
-                              clr2: Colors.deepPurple,
+                              clr1: Colors.teal,
+                              clr2: Colors.teal,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -345,7 +345,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'المنوفيه',
-                              clr1: Colors.red.shade500,
+                              clr1: Colors.yellowAccent,
                               clr2: Colors.yellowAccent,
                             ),
                             CustomContainerPlaces(
@@ -358,7 +358,7 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'بورسعيد',
-                              clr1: Colors.green,
+                              clr1: Colors.pink.shade800,
                               clr2: Colors.pink.shade800,
                             ),
                             CustomContainerPlaces(
@@ -374,7 +374,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'قنا',
                               clr1: Colors.blue.shade900,
-                              clr2: Colors.orange,
+                              clr2: Colors.blue.shade900,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -389,7 +389,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'البحر الاحمر',
                               clr1: Colors.tealAccent,
-                              clr2: Colors.deepPurple,
+                              clr2: Colors.tealAccent,
                             ),
                             CustomContainerPlaces(
                                 onTap: () {
@@ -403,8 +403,8 @@ class _HomeScreenState extends State<Places > {
                                   //     context, IntroductionToCommunicationScience.id);
                                 },
                                 text: 'السويس',
-                                clr1:  Colors.grey.shade900,
-                                clr2:  Colors.amberAccent
+                                clr1:  Colors.amberAccent,
+                                clr2:  Colors.amberAccent,
                             ),
                             CustomContainerPlaces(
 
@@ -418,7 +418,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'الشرقيه',
                               clr1: Colors.blueAccent,
-                              clr2: Colors.tealAccent,
+                              clr2: Colors.blueAccent,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -433,7 +433,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'جنوب سيناء',
                               clr1: Colors.deepOrangeAccent,
-                              clr2: Colors.pink,
+                              clr2: Colors.deepOrangeAccent,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -448,7 +448,7 @@ class _HomeScreenState extends State<Places > {
                               },
                               text: 'شمال سيناء',
                               clr1: Colors.lightGreenAccent,
-                              clr2: Colors.purpleAccent,
+                              clr2: Colors.lightGreenAccent,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -462,8 +462,8 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'سوهاج',
-                              clr1: Colors.brown,
-                              clr2: Colors.greenAccent,
+                              clr1: Colors.grey,
+                              clr2: Colors.grey,
                             ),
                             CustomContainerPlaces(
                               onTap: () {
@@ -477,8 +477,8 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'الوادي الجديد',
-                              clr1: Colors.deepPurple,
-                              clr2: Colors.orange,
+                              clr1: Colors.blueGrey,
+                              clr2: Colors.blueGrey,
                             ),
 
                           ],

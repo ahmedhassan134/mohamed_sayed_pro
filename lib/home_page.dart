@@ -75,23 +75,11 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               centerTitle: true,
-              flexibleSpace: Container(
-                decoration: const BoxDecoration(
-                    gradient: LinearGradient(colors: [
-                  Colors.deepPurpleAccent,
-                  Colors.pink,
-                  Colors.deepPurpleAccent,
-                ])),
-              ),
+
             ),
             body: Stack(
               children: [
-                Image.asset(
-                  'assets/images/four.jpg',
-                  width: double.infinity,
-                  height: double.infinity,
-                  fit: BoxFit.cover,
-                ),
+
                 Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: SizeConfig.defaultSize * 1.2,

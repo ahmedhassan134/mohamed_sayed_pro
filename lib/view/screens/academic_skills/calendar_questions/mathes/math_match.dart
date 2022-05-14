@@ -37,12 +37,12 @@ class _MathMatchState extends State<MathMatch> {
     gameOver = false;
     score=0;
     items=[
-      ItemModels(name: 'One', value: 'One', img: 'assets/onematching.jpg'),
-      ItemModels(name: 'Six', value: 'Six', img: 'assets/sixmatching.jpg'),
-      ItemModels(name: 'Nine', value: 'Nine', img: 'assets/ninematching.jpg'),
-      ItemModels(name: 'Three', value: 'Three', img: 'assets/threematching.jpg'),
-      ItemModels(name: 'Four', value: 'Four', img: 'assets/fourmatching.jpg'),
-      ItemModels(name: 'Five', value: 'Five', img: 'assets/fivematching.jpg'),
+      ItemModels(name: 'واحد', value: 'واحد', img: 'assets/onematching.jpg'),
+      ItemModels(name: 'سته', value: 'سته', img: 'assets/sixmatching.jpg'),
+      ItemModels(name: 'تسعه', value: 'تسعه', img: 'assets/ninematching.jpg'),
+      ItemModels(name: 'ثلاثه', value: 'ثلاثه', img: 'assets/threematching.jpg'),
+      ItemModels(name: 'أربعه', value: 'أربعه', img: 'assets/fourmatching.jpg'),
+      ItemModels(name: 'خمسه', value: 'خمسه', img: 'assets/fivematching.jpg'),
     ];
     items2 = List<ItemModels>.from(items);
     items.shuffle();

@@ -1,6 +1,7 @@
 class ArabicModel{
   final String img;
   final String sound;
+
   ArabicModel({required this.img,required this.sound});
 }
 List<ArabicModel> arabicList=[

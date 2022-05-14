@@ -4,16 +4,26 @@ import 'package:flutter/material.dart';
 import 'package:romio/models/classes/women.dart';
 import 'package:romio/service/responsive_service.dart';
 
-class Women extends StatelessWidget {
+class Women extends StatefulWidget {
   const Women({Key? key}) : super(key: key);
   static String id='women';
 
+  @override
+  State<Women> createState() => _WomenState();
+}
 
+class _WomenState extends State<Women> {
+  final audioPlayer = AudioPlayer(playerId: 'my_unique_playerId');
+  @override
+  void dispose(){
+    audioPlayer.stop();
+    super.dispose();
 
+  }
   @override
   Widget build(BuildContext context) {
 
-    AudioCache player = AudioCache(prefix: 'assets/sounds/women/');
+    AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/women/');
 
     return Scaffold(
       backgroundColor: Colors.red,
@@ -84,5 +94,4 @@ class Women extends StatelessWidget {
       ),
     );
   }
-
 }
