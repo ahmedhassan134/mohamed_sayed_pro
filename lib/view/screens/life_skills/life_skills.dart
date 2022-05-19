@@ -26,17 +26,12 @@ class LifeSkills extends StatelessWidget {
       ),
         body: Stack(
           children: [
-            Image.asset(
-              'assets/images/four.jpg',
-              width: double.infinity,
-              height: double.infinity,
-              fit: BoxFit.cover,
-            ),
+
             SingleChildScrollView(
               child: AnimationLimiter(
                 child: Column(
                   children: AnimationConfiguration.toStaggeredList(
-                    duration: const Duration(milliseconds: 700),
+                    duration: const Duration(milliseconds: 500),
                     childAnimationBuilder: (widget) => SlideAnimation(
                       horizontalOffset: 200,
                       child: FadeInAnimation(

@@ -40,12 +40,17 @@ class CustomStack extends StatelessWidget {
           child: FittedBox(
             child: Padding(
               padding:  EdgeInsetsDirectional.only(top: SizeConfig.defaultSize *3,end: SizeConfig.defaultSize *.6,start:  SizeConfig.defaultSize *1) ,
-              child: Text(
-                text!,
-                style:  TextStyle(
-                    fontSize: SizeConfig.defaultSize *3,
-                    fontWeight: FontWeight.bold,
-                  color: clr??Colors.black
+              child: TextButton(
+                onPressed: onTap,
+                child: Text(
+
+                  text!,
+                  style:  TextStyle(
+
+                      fontSize: SizeConfig.defaultSize *3,
+                      fontWeight: FontWeight.bold,
+                    color: clr??Colors.black
+                  ),
                 ),
               ),
             ),

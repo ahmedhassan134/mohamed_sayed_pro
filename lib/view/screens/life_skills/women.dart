@@ -26,19 +26,14 @@ class _WomenState extends State<Women> {
     AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/women/');
 
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text('نسائي'),
         backgroundColor: Colors.blue,
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/four.jpg',
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+
           ListView.builder(
               itemCount:
               womenList.length,

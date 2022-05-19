@@ -20,12 +20,7 @@ class Clothes extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/four.jpg',
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+
           Column(
             children: [
               SizedBox(height: SizeConfig.defaultSize *2,),

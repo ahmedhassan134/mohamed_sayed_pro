@@ -14,11 +14,11 @@ static String id='splashh';
     SizeConfig().init(context);
     return SplashScreenView(
       navigateRoute: const HomePage(),
-      duration: 4000,
+      duration: 3000,
       imageSize: 400,
 
 
-      imageSrc: "assets/images/app_icon.jpg",
+      imageSrc: "assets/images/app_icon-removebg-preview.png",
       text: "الاعاقه العقليه",
       textType: TextType.ColorizeAnimationText,
       textStyle:  TextStyle(

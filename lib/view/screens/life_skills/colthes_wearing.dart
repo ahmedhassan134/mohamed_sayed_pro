@@ -17,13 +17,12 @@ class ClothesWearing extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Stack(
-        children: [
-          Image.asset(
-            'assets/images/four.jpg',
+        children:  [
+          Image.asset('assets/images/modfy/clothes_modf.jpg',
+            fit: BoxFit.fill,
             width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+            height: double.infinity,),
+
 
         ],
       ),

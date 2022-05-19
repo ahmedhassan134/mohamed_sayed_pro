@@ -23,49 +23,49 @@ class _CalenderArabicState extends State<CalenderArabic> {
           children: [
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 34,  text: 'أ',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 26, margeTop:SizeConfig.defaultSize*  0, ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop: 0, ),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 26, margeTop:SizeConfig.defaultSize*  0,answerM: 'ب'),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop: 0,answerM: 'ت'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 12,  text: 'ث',margeTop:SizeConfig.defaultSize* 1 ),
 
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 6,  text: 'ج',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 1, margeTop:SizeConfig.defaultSize*  0 ),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 1, margeTop:SizeConfig.defaultSize*  0,answerM: 'ح' ),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 6,  text: 'خ',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 12, margeTop:SizeConfig.defaultSize*  0 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop:SizeConfig.defaultSize*  0),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 12, margeTop:SizeConfig.defaultSize*  0 ,answerM: 'د'),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop:SizeConfig.defaultSize*  0,answerM: 'ذ'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 28,  text: 'ر',margeTop:SizeConfig.defaultSize* 0 ),
 
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 21,  text: 'ز',margeTop:SizeConfig.defaultSize* 0 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 15, margeTop:SizeConfig.defaultSize*  0),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 15, margeTop:SizeConfig.defaultSize*  0,answerM: 'س'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 9,  text: 'ش',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 1,margeTop:SizeConfig.defaultSize*  0 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 6, margeTop:SizeConfig.defaultSize*  0),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 1,margeTop:SizeConfig.defaultSize*  0 ,answerM: 'ص'),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 6, margeTop:SizeConfig.defaultSize*  0,answerM: 'ض'),
 
 
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 12,  text: 'ط',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop:SizeConfig.defaultSize*  0),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 28, margeTop:SizeConfig.defaultSize*  0),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop:SizeConfig.defaultSize*  0,answerM: 'ظ'),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 28, margeTop:SizeConfig.defaultSize*  0,answerM: 'ع'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 21,  text: 'غ',margeTop:SizeConfig.defaultSize* 1 ),
 
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 15,  text: 'ف',margeTop:SizeConfig.defaultSize* 1 ),
-      NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 9, margeTop:SizeConfig.defaultSize*  0),
+      NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 9, margeTop:SizeConfig.defaultSize*  0,answerM: 'ق'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 1,  text: 'ك',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 6, margeTop:SizeConfig.defaultSize*  0),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 6, margeTop:SizeConfig.defaultSize*  0,answerM: 'ل'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 12,  text: 'م',margeTop:SizeConfig.defaultSize* 1 ),
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 19,  text: 'ن',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 28,margeTop:SizeConfig.defaultSize*  0 ),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 28,margeTop:SizeConfig.defaultSize*  0 ,answerM: 'ه'),
 
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 21, margeTop:SizeConfig.defaultSize*  0),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 21, margeTop:SizeConfig.defaultSize*  0,answerM: 'و'),
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 15,  text: 'ي',margeTop:SizeConfig.defaultSize* 1 ),
             SizedBox(height: SizeConfig.defaultSize* 1,),
 

@@ -50,18 +50,14 @@ class _HomeScreenState extends State<Places > {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('اماكن تقديم الخدمه'),
       ),
 
           body: Stack(
             children: [
-              Image.asset(
-                'assets/images/four.jpg',
-                width: double.infinity,
-                height: double.infinity,
-                fit: BoxFit.cover,
-              ),
+
               SingleChildScrollView(
                 child: Padding(
                   padding: EdgeInsets.symmetric(
@@ -70,7 +66,7 @@ class _HomeScreenState extends State<Places > {
                   child: AnimationLimiter(
                       child: Column(
                         children: AnimationConfiguration.toStaggeredList(
-                          duration: const Duration(milliseconds: 1100),
+                          duration: const Duration(milliseconds: 600),
                           childAnimationBuilder: (widget) => SlideAnimation(
                             horizontalOffset: 200,
                             child: FadeInAnimation(
@@ -90,8 +86,8 @@ class _HomeScreenState extends State<Places > {
                                 //     context, IntroductionToCommunicationScience.id);
                               },
                               text: 'الاسكندريه',
-                              clr1: Colors.red,
-                              clr2: Colors.red,
+                              clr1:  const Color(0xff0BCC9D),
+                              clr2:  const Color(0xff0BCC9D),
                             ),
                             CustomContainerPlaces(
                               onTap: () {

@@ -18,13 +18,12 @@ class FoodEatingTwo extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Stack(
-        children: [
-          Image.asset(
-            'assets/images/four.jpg',
-            width: double.infinity,
-            height: double.infinity,
+        children:  [
+          Image.asset('assets/images/modfy/food_eating_modf.jpg',
             fit: BoxFit.cover,
-          ),
+          width: double.infinity,
+          height: double.infinity,),
+
 
         ],
       ),

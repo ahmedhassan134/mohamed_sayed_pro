@@ -23,12 +23,7 @@ static String id='skills_academic';
       ),
         body: Stack(
           children: [
-            Image.asset(
-              'assets/images/four.jpg',
-              width: double.infinity,
-              height: double.infinity,
-              fit: BoxFit.cover,
-            ),
+
             SingleChildScrollView(
               child: AnimationLimiter(
                 child: Column(
@@ -66,9 +61,9 @@ static String id='skills_academic';
                       CustomStack(onTap: (){
                         Navigator.pushNamed(context, CalenderQuestion.id);
 
-                      }, text:'اسئله تقويم', img: 'assets/images/academic_skills/d4.jfif',
+                      }, text:'اسئله تقويم', img: 'assets/images/modfy/question_modf.jpg',
 
-                        clr: Colors.white,
+                        clr: Colors.black,
                         s1:  SizeConfig.defaultSize * 2,
                         s2:  SizeConfig.defaultSize * 2,
                       ),

@@ -20,6 +20,7 @@ class CustomExpanded extends StatelessWidget {
           width: SizeConfig.defaultSize * .25,
           height: SizeConfig.defaultSize * 20,
           decoration: BoxDecoration(
+
               borderRadius: BorderRadius.circular(SizeConfig.defaultSize * 2),
               image:
                   DecorationImage(image: AssetImage(img!), fit: BoxFit.cover)),
@@ -33,9 +34,9 @@ class CustomExpanded extends StatelessWidget {
               child: Text(
                 text!,
                 style: TextStyle(
-                    color: Colors.black.withOpacity(1),
+                    color: Colors.black,
                     fontSize: SizeConfig.blockSizeVertical * 3,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.w900),
               ),
             ),
           ),

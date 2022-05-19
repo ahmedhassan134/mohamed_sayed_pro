@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:romio/service/responsive_service.dart';
 import 'package:romio/view/screens/life_skills/food_eating.dart';
@@ -19,12 +20,8 @@ class ClothesHomeScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/four.jpg',
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+
+
           Column(
             children: [
               SizedBox(height: SizeConfig.defaultSize *2,),

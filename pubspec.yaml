@@ -55,7 +55,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/app_icon.jpg"
+  image_path: "assets/images/app_icon-removebg-preview.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -84,7 +84,6 @@ flutter:
     - assets/images/academic_skills/
     - assets/images/life_skills/
     - assets/images/mental_retardation/
-    - assets/images/tips_and_advice/
     - assets/images/drawer/who_we_are/
     - assets/images/numbers/
     - assets/sounds/numbers/
@@ -100,6 +99,7 @@ flutter:
     - assets/sounds/mens/
     - assets/sounds/women/
     - assets/images/places/
+    - assets/images/modfy/
     - assets/sounds/take_off/
     - assets/fourmatching.jpg
     - assets/ninematching.jpg

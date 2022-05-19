@@ -28,19 +28,14 @@ class _MathState extends State<Math> {
     AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/numbers/');
 
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text('حساب'),
         backgroundColor: Colors.pinkAccent,
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/four.jpg',
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+
           ListView.builder(
               itemCount: mathList.length,
               itemBuilder: (context, index) {

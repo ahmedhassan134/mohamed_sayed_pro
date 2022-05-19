@@ -61,10 +61,11 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData(
         brightness: Brightness.light,
+        scaffoldBackgroundColor:  const Color(0xffe7e7e7),
         appBarTheme: const AppBarTheme(
             backgroundColor: Colors.deepPurple,
             centerTitle: true,
-            titleTextStyle: TextStyle(color: Colors.white, fontSize: 25)),
+            titleTextStyle: TextStyle(color: Color(0xffe7e7e7), fontSize: 25)),
       ),
       debugShowCheckedModeBanner: false,
 

@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:romio/models/obj/who_we_are.dart';
 
+import 'package:url_launcher/url_launcher_string.dart';
+
 
 import '../../../service/responsive_service.dart';
 
@@ -70,6 +72,76 @@ class AppPresenter extends StatelessWidget {
                 SizedBox(
                   height: SizeConfig.defaultSize * 3,
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+
+                    GestureDetector(
+                        onTap: ()async{
+
+                          await  _makePhoneCall('01122719189');
+                        },
+                        child: Container(
+                          margin:    EdgeInsets.all(SizeConfig.defaultSize *1),
+                          padding:  EdgeInsets.all(SizeConfig.defaultSize *1), // Border width
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle),
+                          child: Stack(
+                            children: [
+                              ClipOval(
+                                child: SizedBox.fromSize(
+                                  size: Size.fromRadius(SizeConfig.defaultSize * 7),
+                                  // Image radius
+                                  child: Image.asset('assets/images/drawer/who_we_are/mohamed_sayed.jpg',
+                                      fit: BoxFit.fill),
+                                ),
+                              ),
+                              Positioned(
+                                  top: SizeConfig.defaultSize * 7.5,
+                                  left: SizeConfig.defaultSize * 1,
+                                  child: Icon(
+                                    Icons.call,
+                                    color: Colors.green,
+                                    size: SizeConfig.defaultSize * 4,
+                                  ))
+                            ],
+                          ),
+                        )),
+                    GestureDetector(
+                        onTap: ()async{
+
+                          await  _makePhoneCall('01122719189');
+                        },
+                        child: Container(
+                          margin:   EdgeInsets.all(SizeConfig.defaultSize *1),
+    padding:  EdgeInsets.all(SizeConfig.defaultSize *1),  // Border width
+                          decoration: const BoxDecoration(
+                              shape: BoxShape.circle),
+                          child: Stack(
+                            children: [
+                              ClipOval(
+                                child: SizedBox.fromSize(
+                                  size: Size.fromRadius(SizeConfig.defaultSize * 7),
+                                  // Image radius
+                                  child: Image.asset('assets/images/drawer/who_we_are/sanaa_ebrahim.jpg',
+                                      fit: BoxFit.fill),
+                                ),
+                              ),
+                              Positioned(
+                                  top: SizeConfig.defaultSize * 7.5,
+                                  left: SizeConfig.defaultSize * 1,
+                                  child: Icon(
+                                    Icons.call,
+                                    color: Colors.green,
+                                    size: SizeConfig.defaultSize * 4,
+                                  ))
+                            ],
+                          ),
+                        )),
+                  ],
+                ),
+
+
 
 
 
@@ -127,6 +199,18 @@ class AppPresenter extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Future<void> _makePhoneCall(String phoneNumber) async {
+    // Use `Uri` to ensure that `phoneNumber` is properly URL-encoded.
+    // Just using 'tel:$phoneNumber' would create invalid URLs in some cases,
+    // such as spaces in the input, which would cause `launch` to fail on some
+    // platforms.
+    final Uri launchUri = Uri(
+      scheme: 'tel',
+      path: phoneNumber,
+    );
+    await launchUrlString(launchUri.toString());
   }
 
 }

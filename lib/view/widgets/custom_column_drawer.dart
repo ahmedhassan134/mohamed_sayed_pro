@@ -17,12 +17,12 @@ class  CustomGesterDetectorDrawer extends StatelessWidget {
         children: [
           Expanded
 
-            (child: Icon(iconData,size: SizeConfig.defaultSize* 3.5,),flex: 1,),
+            (child: Icon(iconData,size: SizeConfig.defaultSize* 3.5,color: const Color(0xffe7e7e7),),flex: 1,),
           SizedBox(width: SizeConfig.defaultSize* 2,),
           Expanded(
             child: GestureDetector(
               onTap: onTap,
-              child: Text(text,style:  TextStyle(color: Colors.white,fontSize:SizeConfig.defaultSize* 2.4,fontWeight: FontWeight.bold),),
+              child: Text(text,style:  TextStyle(color: const Color(0xffe7e7e7),fontSize:SizeConfig.defaultSize* 2.4,fontWeight: FontWeight.bold),),
             ),flex: 3,
           ),
         ],

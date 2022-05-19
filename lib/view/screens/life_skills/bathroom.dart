@@ -28,19 +28,14 @@ class _BathroomState extends State<Bathroom> {
 
     AudioCache player = AudioCache( fixedPlayer: audioPlayer,prefix: 'assets/sounds/bathroom/');
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text('استخدام المرحاض '),
         backgroundColor: Colors.blue,
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/four.jpg',
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+
           ListView.builder(
               itemCount: bathList.length,
               itemBuilder: (context, index) {

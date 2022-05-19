@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
                     child: AnimationLimiter(
                       child: Column(
                         children: AnimationConfiguration.toStaggeredList(
-                          duration: const Duration(milliseconds: 1700),
+                          duration: const Duration(milliseconds: 500),
                           childAnimationBuilder: (widget) => SlideAnimation(
                             verticalOffset: 200,
                             child: FadeInAnimation(
@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                               children: [
 
                                 CustomExpanded(
-                                  img: 'assets/images/tips_and_advice/1.png',
+                                  img: 'assets/images/modfy/advice_modf.jpg',
                                   text: 'النصائح والارشادات',
                                   onTap: () {
                                     Navigator.pushNamed(context, AdviceHome.id);
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 CustomExpanded(
-                                  img: 'assets/images/academic_skills/d1.jfif',
+                                  img: 'assets/images/modfy/acadmic_modf.jpg',
                                   text: 'مهارات اكاديميه',
                                   onTap: () {
                                     Navigator.pushNamed(
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                                   width: SizeConfig.defaultSize * 1,
                                 ),
                                 CustomExpanded(
-                                  img: 'assets/images/life_skills/c1.png',
+                                  img: 'assets/images/modfy/life_skills_modf.jpg',
                                   text: 'مهارات حياتيه',
                                   onTap: () {
                                     Navigator.pushNamed(context, LifeSkills.id);

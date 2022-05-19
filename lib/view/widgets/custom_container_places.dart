@@ -28,10 +28,10 @@ class CustomContainerPlaces extends StatelessWidget {
                     blurRadius: SizeConfig.defaultSize*1
                 )
               ],
-              gradient: LinearGradient(
+              gradient:  LinearGradient(
                   colors: [
-                    clr1,
-                    clr2
+                    const Color(0xff0063C0).withOpacity(.6),
+                    const Color(0xff0063C0).withOpacity(.6),
                   ]
               )
           ),

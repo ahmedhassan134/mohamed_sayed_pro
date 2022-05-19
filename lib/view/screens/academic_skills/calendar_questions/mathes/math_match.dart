@@ -210,13 +210,13 @@ class _MathMatchState extends State<MathMatch> {
 
   }
   void ss(String music){
-    Timer(const Duration(seconds: 6), (){
+    Timer(const Duration(seconds: 2), (){
       a.play(music);
 
     });
   }
   String result(){
-    if(score>=70){
+    if(score>=40){
       ss('success.wav');
 
       return 'Awesome!';

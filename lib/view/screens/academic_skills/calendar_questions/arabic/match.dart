@@ -212,7 +212,7 @@ class _ArabicMatchingState extends State<ArabicMatching> {
 
   }
   void ss(String music){
-    Timer(const Duration(seconds: 4), (){
+    Timer(const Duration(seconds: 2), (){
       a.play(music);
 
     });

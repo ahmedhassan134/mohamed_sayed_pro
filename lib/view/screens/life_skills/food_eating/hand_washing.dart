@@ -17,13 +17,12 @@ class HandWashing extends StatelessWidget {
         backgroundColor: Colors.blue,
       ),
       body: Stack(
-        children: [
-          Image.asset(
-            'assets/images/four.jpg',
+        children:  [
+          Image.asset('assets/images/modfy/hand_washing_modf.jpg',
+            fit: BoxFit.fill,
             width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+            height: double.infinity,),
+
 
         ],
       ),
@@ -37,12 +36,12 @@ class HandWashing extends StatelessWidget {
 
              const FloatingWidget(
               heroTag: 'one',
-              urll: ' https://youtu.be/PoklaWFH4wM',
+              urll: 'https://youtu.be/PoklaWFH4wM',
             ),
             SizedBox(height: SizeConfig.defaultSize *.6,),
              const FloatingWidget(
               heroTag: 'two',
-              urll: ' https://youtu.be/AXvv1tjnRP4',
+              urll: 'https://youtu.be/AXvv1tjnRP4',
             ),
           ],
         ),

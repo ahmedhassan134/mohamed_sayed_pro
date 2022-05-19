@@ -23,28 +23,22 @@ class _CalenderMathState extends State<CalenderMath> {
           children: [
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 34,  text: '1',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 26 ,margeTop:SizeConfig.defaultSize*  0),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19,margeTop:SizeConfig.defaultSize*  0 ),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 26 ,margeTop:SizeConfig.defaultSize*  0, answerM: '2'),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19,margeTop:SizeConfig.defaultSize*  0 , answerM: '3'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 12,  text: '4',margeTop:SizeConfig.defaultSize* 1 ),
 
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 6,  text: '5',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 1,margeTop:SizeConfig.defaultSize*  0 ),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 1,margeTop:SizeConfig.defaultSize*  0, answerM: '6' ),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 6,  text: '7',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 12,margeTop:SizeConfig.defaultSize*  0 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop:SizeConfig.defaultSize*  0),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 12,margeTop:SizeConfig.defaultSize*  0, answerM: '8' ),
+            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 19, margeTop:SizeConfig.defaultSize*  0, answerM: '9'),
 
             TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 28,  text: '10',margeTop:SizeConfig.defaultSize* 1 ),
 
 
-            TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 21,  text: '11',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 15, margeTop:SizeConfig.defaultSize*  0),
-
-            TextCircualrAvatar(margeStart: SizeConfig.defaultSize* 9,  text: '13',margeTop:SizeConfig.defaultSize* 1 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 1,margeTop:SizeConfig.defaultSize*  0 ),
-            NonTextCircularAvatar(margeStart:SizeConfig.defaultSize* 6, margeTop:SizeConfig.defaultSize*  0),
 
             const Divider(color: Colors.black,),
             SizedBox(height: SizeConfig.defaultSize* 2,),

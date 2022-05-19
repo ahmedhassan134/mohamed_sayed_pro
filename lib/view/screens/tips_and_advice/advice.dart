@@ -32,7 +32,7 @@ class _AdviceHomeState extends State<AdviceHome>
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           const Stackk(
-            img: 'assets/images/tips_and_advice/1.png',
+            img: 'assets/images/modfy/advice_modf.jpg',
           ),
           SizedBox(
             height: SizeConfig.defaultSize * 5,

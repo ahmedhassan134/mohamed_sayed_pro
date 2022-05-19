@@ -35,7 +35,7 @@ class DrawerWidget extends StatelessWidget {
                   ),
                   CircleAvatar(
                     radius: SizeConfig.defaultSize * 6,
-                    backgroundImage: const AssetImage('assets/images/app_icon.jpg'),// Image radius
+                    backgroundImage: const AssetImage('assets/images/app_icon-removebg-preview.png'),// Image radius
                   ),
                   SizedBox(
                     height: SizeConfig.defaultSize * 1,
@@ -89,19 +89,21 @@ class DrawerWidget extends StatelessWidget {
                                 scheme: 'mailto',
                                 path: 'Mohamedshahalb1999@gmail.com',
                                 query:
-                                'subject=App Feedback&body=App Version 3.23', //add subject and body here
+                                'subject=الاعاقه العقليه ', //add subject and body here
                               );
 
                               var url = params.toString();
                               if (await canLaunchUrlString(url)) {
                                 await launchUrlString(url);
                               } else {
-                                throw 'Could not launch $url';
+                                throw   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('wrong url ')));
                               }
                             },
                             icon: Icon(
+
                               Icons.outgoing_mail,
                               size: SizeConfig.defaultSize * 3.5,
+                              color: const Color(0xffe7e7e7),
                             ),),
                           flex: 1,
                         ),
@@ -112,14 +114,14 @@ class DrawerWidget extends StatelessWidget {
                                 scheme: 'mailto',
                                 path: 'Mohamedshahalb1999@gmail.com',
                                 query:
-                                'subject=App Feedback&body=App Version 3.23', //add subject and body here
+                                'subject=الاعاقه العقليه', //add subject and body here
                               );
 
                               var url = params.toString();
                               if (await canLaunchUrlString(url)) {
                                 await launchUrlString(url);
                               } else {
-                                throw 'Could not launch $url';
+                                throw   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('wrong url ')));
                               }
                             },
                             child: Text('غرفة التواصل ',

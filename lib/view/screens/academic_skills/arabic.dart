@@ -29,19 +29,14 @@ class _ArabicState extends State<Arabic> {
   Widget build(BuildContext context) {
     AudioCache player = AudioCache(fixedPlayer: audioPlayer,prefix: 'assets/sounds/alphabetic/');
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.grey,
       appBar: AppBar(
         title: const Text('عربي'),
         backgroundColor: Colors.pinkAccent,
       ),
       body: Stack(
         children: [
-          Image.asset(
-            'assets/images/four.jpg',
-            width: double.infinity,
-            height: double.infinity,
-            fit: BoxFit.cover,
-          ),
+
           ListView.builder(
               itemCount: arabicList.length,
               itemBuilder: (context, index) {
